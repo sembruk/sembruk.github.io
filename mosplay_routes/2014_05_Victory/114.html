@@ -1,0 +1,75 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<style>
+body {font-family: "Arial Narrow"; font-size: 10pt;}
+table {font-family: "Arial Narrow"; font-size: 10pt; border:1px solid #AA0055; background: #DDDDAA;text-align: center;}
+table td{ margin:O; padding: 0 2px; background: #FFFFFF;}
+.rezult th { font-family: "Arial Narrow";font-style: italic; font-size: 10pt;color: #AA0055;padding: 2px 3px; background: #EEEEBB;}
+H1  {font-size: 14pt;font-weight: bold;color: #AA0055;text-align: left;}
+.yl, tr.yl td {background: #FFFFAA;}
+</style><title>Рогейн победы. Сплиты команды "Легенда"</title></head><body><h1>График движения команды 114. БОГОПОЛЬСКАЯ ЕЛЕНА</h1><table class="rezult"><tr><th>Путь</th><th>Время</th><th>Сплит</th><th>Очки</th><th>Расстояние (км)</th><th>Скорость (мин/км)</th></tr><tr><td>S - 44</td><td>16:29</td><td>16:29</td><td>4 / 4</td><td>1.34 / 1.34</td><td><strong>12:19</strong></td></tr><tr class="yl"><td>44 - 36</td><td>38:52</td><td>22:23</td><td>3 / 7</td><td>1.59 / 2.93</td><td><strong>14:05</strong></td></tr><tr><td>36 - 59</td><td>1:03:29</td><td>24:37</td><td>5 / 12</td><td>2.02 / 4.95</td><td><strong>12:12</strong></td></tr><tr class="yl"><td>59 - 76</td><td>1:27:03</td><td>23:34</td><td>7 / 19</td><td>1.11 / 6.06</td><td><strong>21:14</strong></td></tr><tr><td>76 - 63</td><td>1:39:16</td><td>12:13</td><td>6 / 25</td><td>0.77 / 6.83</td><td><strong>15:53</strong></td></tr><tr class="yl"><td>63 - 30</td><td>1:58:25</td><td>19:09</td><td>3 / 28</td><td>1.36 / 8.19</td><td><strong>14:03</strong></td></tr><tr><td>30 - 61</td><td>2:14:27</td><td>16:02</td><td>6 / 34</td><td>0.83 / 9.02</td><td><strong>19:13</strong></td></tr><tr class="yl"><td>61 - 62</td><td>2:27:34</td><td>13:07</td><td>6 / 40</td><td>0.72 / 9.74</td><td><strong>18:18</strong></td></tr><tr><td>62 - 43</td><td>2:40:54</td><td>13:20</td><td>4 / 44</td><td>0.93 / 10.67</td><td><strong>14:22</strong></td></tr><tr class="yl"><td>43 - 41</td><td>3:00:27</td><td>19:33</td><td>4 / 48</td><td>1.19 / 11.86</td><td><strong>16:26</strong></td></tr><tr><td>41 - 31</td><td>3:08:47</td><td>08:20</td><td>3 / 51</td><td>0.72 / 12.58</td><td><strong>11:31</strong></td></tr><tr class="yl"><td>31 - 34</td><td>3:22:21</td><td>13:34</td><td>3 / 54</td><td>1.58 / 14.16</td><td><strong>8:36</strong></td></tr><tr><td>34 - 40</td><td>3:35:02</td><td>12:41</td><td>4 / 58</td><td>1.14 / 15.30</td><td><strong>11:10</strong></td></tr><tr class="yl"><td>40 - F</td><td>3:53:28</td><td>18:26</td><td>0 / 58</td><td>1.92 / 17.22</td><td><strong>9:35</strong></td></tr><tr class="yl"><th>&nbsp;</th><th>3:53:28</th><th>&nbsp;</th><th>58</th><th>17.22 км</th><th><strong>13:33 мин/км</strong></th></tr></table><br><div style="position: relative"><div style="position: relative">медленно</div>
+<div style="position: absolute; top: 0; left: 421.5;">средне</div>
+<div style="position: absolute; top: 0; left: 783;">быстро</div>
+</div><canvas id="e" width="843" height="1200"></canvas>
+<script>
+var kp_list = [[-127,24.376811594203, "rgb(255,128,0)"],[-197.46376811594,-112.11594202899, "rgb(222,0,66)"],[-385.55072463768,-163.79710144928, "rgb(255,134,0)"],[-469.97101449275,-97.608695652174, "rgb(127,0,256)"],[-432.78260869565,-33.246376811594, "rgb(185,0,140)"],[-307.86956521739,-75.188405797101, "rgb(223,0,64)"],[-324.84057971014,3.5942028985507, "rgb(145,0,220)"],[-370.23188405797,55.913043478261, "rgb(154,0,202)"],[-283.26086956522,77.797101449275, "rgb(213,0,84)"],[-204.13043478261,161.13043478261, "rgb(177,0,156)"],[-137.02898550725,180.63768115942, "rgb(255,164,0)"],[-34.550724637681,293.33333333333, "rgb(255,256,0)"],[-27.985507246377,183.73913043478, "rgb(255,178,0)"],[0.096618357487923,-0.096618357487923, "rgb(255,230,0)"],];
+var canvas = document.getElementById("e");
+var context = canvas.getContext("2d");
+var map = new Image();
+var c = [815.84541062802, 740.86956521739];
+map.src = "map.jpg";
+map.onload = function() {
+	context.drawImage(map, 0, 0);
+	for (i=0, l=kp_list.length; i<l; i++) {
+		context.beginPath();
+		context.arc(c[0] + kp_list[i][0], c[1] + kp_list[i][1], 4, 0, Math.PI * 2, false);
+		context.closePath();
+		context.strokeStyle = "#f00";
+		context.stroke();
+		context.fillStyle = "#f00";
+		context.fill();
+	}
+	context.lineWidth = 3;
+	var old_x = 0, old_y = 0;
+	for (i=0, l=kp_list.length; i<l; i++) {
+		context.beginPath();
+		context.moveTo(c[0] + old_x, c[1] + old_y);
+		context.lineTo(c[0] + kp_list[i][0], c[1] + kp_list[i][1]);
+		context.strokeStyle = kp_list[i][2];
+		context.stroke();
+		old_x = kp_list[i][0]; old_y = kp_list[i][1];
+	}
+	context.beginPath();
+	context.strokeStyle = "#f00";
+	var km_length = 96.618357487923;
+	context.moveTo(30,10);
+	context.lineTo(30,50);
+	context.moveTo(30,30);
+	context.lineTo(30+km_length,30);
+	context.moveTo(30+km_length,10);
+	context.lineTo(30+km_length,50);
+	context.stroke();
+	context.fillStyle = '#f00';
+	context.font = 'bold 30px sans-serif';
+	context.fillText('1 km', km_length/2, 40);
+	var lingrad = context.createLinearGradient(0,5,canvas.width,5);
+    lingrad.addColorStop(0, 'rgb(128,0,255)');
+    lingrad.addColorStop(0.5, 'rgb(255,0,0)');
+    lingrad.addColorStop(1, 'rgb(255,255,0)');
+	context.fillStyle = lingrad;
+    context.fillRect(0,0,canvas.width,10);
+};
+</script><script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script>
+<noscript><div><img src="//mc.yandex.ru/watch/1522145" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter --></noindex>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-6677572-12']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<!--LiveInternet counter--><script type="text/javascript">new Image().src = "//counter.yadro.ru/hit?r" + escape(top.document.referrer) + ((typeof(screen)=="undefined")?"" : ";s"+screen.width+"*"+screen.height+"*" + (screen.colorDepth?screen.colorDepth:screen.pixelDepth)) + ";u"+escape(document.URL) + ";h"+escape(document.title.substring(0,80)) + ";" +Math.random();</script><!--/LiveInternet-->
+</body></html>

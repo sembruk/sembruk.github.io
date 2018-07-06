@@ -1,0 +1,75 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<style>
+body {font-family: "Arial Narrow"; font-size: 10pt;}
+table {font-family: "Arial Narrow"; font-size: 10pt; border:1px solid #AA0055; background: #DDDDAA;text-align: center;}
+table td{ margin:O; padding: 0 2px; background: #FFFFFF;}
+.rezult th { font-family: "Arial Narrow";font-style: italic; font-size: 10pt;color: #AA0055;padding: 2px 3px; background: #EEEEBB;}
+H1  {font-size: 14pt;font-weight: bold;color: #AA0055;text-align: left;}
+.yl, tr.yl td {background: #FFFFAA;}
+</style><title>Золотая осень. Сплиты команды "Айболит против Бармалея!"</title></head><body><h1>График движения команды 148. АНЧ ДМИТРИЙ</h1><table class="rezult"><tr><th>Путь</th><th>Время</th><th>Сплит</th><th>Очки</th><th>Расстояние (км)</th><th>Скорость (мин/км)</th></tr><tr><td>S - 37</td><td>07:52</td><td>07:52</td><td>3 / 3</td><td>0.81 / 0.81</td><td><strong>9:39</strong></td></tr><tr class="yl"><td>37 - 47</td><td>17:44</td><td>09:52</td><td>4 / 7</td><td>0.88 / 1.69</td><td><strong>11:12</strong></td></tr><tr><td>47 - 69</td><td>41:13</td><td>23:29</td><td>6 / 13</td><td>0.73 / 2.43</td><td><strong>32:05</strong></td></tr><tr class="yl"><td>69 - 49</td><td>1:00:48</td><td>19:35</td><td>4 / 17</td><td>1.40 / 3.83</td><td><strong>13:60</strong></td></tr><tr><td>49 - 73</td><td>1:20:55</td><td>20:07</td><td>7 / 24</td><td>1.71 / 5.54</td><td><strong>11:45</strong></td></tr><tr class="yl"><td>73 - 66</td><td>1:43:01</td><td>22:06</td><td>6 / 30</td><td>1.15 / 6.69</td><td><strong>19:13</strong></td></tr><tr><td>66 - 65</td><td>2:03:22</td><td>20:21</td><td>6 / 36</td><td>0.99 / 7.67</td><td><strong>20:37</strong></td></tr><tr class="yl"><td>65 - 83</td><td>2:12:55</td><td>09:33</td><td>8 / 44</td><td>0.96 / 8.63</td><td><strong>9:58</strong></td></tr><tr><td>83 - 44</td><td>2:31:01</td><td>18:06</td><td>4 / 48</td><td>1.25 / 9.88</td><td><strong>14:29</strong></td></tr><tr class="yl"><td>44 - 86</td><td>3:20:04</td><td>49:03</td><td>8 / 56</td><td>2.47 / 12.36</td><td><strong>19:50</strong></td></tr><tr><td>86 - 35</td><td>3:39:56</td><td>19:52</td><td>3 / 59</td><td>1.57 / 13.92</td><td><strong>12:41</strong></td></tr><tr class="yl"><td>35 - F</td><td>3:47:35</td><td>07:39</td><td>0 / 59</td><td>0.76 / 14.69</td><td><strong>10:01</strong></td></tr><tr class="yl"><th>&nbsp;</th><th>3:47:35</th><th>&nbsp;</th><th>59</th><th>14.69 км</th><th><strong>15:30 мин/км</strong></th></tr></table><br><div style="position: relative"><div style="position: relative">медленно</div>
+<div style="position: absolute; top: 0; left: 600;">средне</div>
+<div style="position: absolute; top: 0; left: 1140;">быстро</div>
+</div><canvas id="e" width="1200" height="845"></canvas>
+<script>
+var kp_list = [[-71.410194174757,-33.977184466019, "rgb(255,256,0)"],[-154.50291262136,-13.976213592233, "rgb(255,220,0)"],[-114.10339805825,44.497572815534, "rgb(127,0,256)"],[-239.91990291262,95.692718446602, "rgb(255,130,0)"],[-340.38349514563,-36.699029126214, "rgb(255,206,0)"],[-333.62475728155,74.743689320388, "rgb(194,0,122)"],[-419.77572815534,116.67233009709, "rgb(184,0,142)"],[-456.93349514563,201.90582524272, "rgb(255,250,0)"],[-341.72912621359,239.79757281553, "rgb(255,106,0)"],[-127.9572815534,130.31213592233, "rgb(190,0,130)"],[12.844660194175,72.969902912621, "rgb(255,178,0)"],[0.097087378640777,-0.097087378640777, "rgb(255,248,0)"],];
+var canvas = document.getElementById("e");
+var context = canvas.getContext("2d");
+var map = new Image();
+var c = [551.45631067961, 454.36893203883];
+map.src = "map.jpg";
+map.onload = function() {
+	context.drawImage(map, 0, 0);
+	for (i=0, l=kp_list.length; i<l; i++) {
+		context.beginPath();
+		context.arc(c[0] + kp_list[i][0], c[1] + kp_list[i][1], 4, 0, Math.PI * 2, false);
+		context.closePath();
+		context.strokeStyle = "#f00";
+		context.stroke();
+		context.fillStyle = "#f00";
+		context.fill();
+	}
+	context.lineWidth = 3;
+	var old_x = 0, old_y = 0;
+	for (i=0, l=kp_list.length; i<l; i++) {
+		context.beginPath();
+		context.moveTo(c[0] + old_x, c[1] + old_y);
+		context.lineTo(c[0] + kp_list[i][0], c[1] + kp_list[i][1]);
+		context.strokeStyle = kp_list[i][2];
+		context.stroke();
+		old_x = kp_list[i][0]; old_y = kp_list[i][1];
+	}
+	context.beginPath();
+	context.strokeStyle = "#f00";
+	var km_length = 97.087378640777;
+	context.moveTo(30,10);
+	context.lineTo(30,50);
+	context.moveTo(30,30);
+	context.lineTo(30+km_length,30);
+	context.moveTo(30+km_length,10);
+	context.lineTo(30+km_length,50);
+	context.stroke();
+	context.fillStyle = '#f00';
+	context.font = 'bold 30px sans-serif';
+	context.fillText('1 km', km_length/2, 40);
+	var lingrad = context.createLinearGradient(0,5,canvas.width,5);
+    lingrad.addColorStop(0, 'rgb(128,0,255)');
+    lingrad.addColorStop(0.5, 'rgb(255,0,0)');
+    lingrad.addColorStop(1, 'rgb(255,255,0)');
+	context.fillStyle = lingrad;
+    context.fillRect(0,0,canvas.width,10);
+};
+</script><script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script>
+<noscript><div><img src="//mc.yandex.ru/watch/1522145" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter --></noindex>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-6677572-12']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<!--LiveInternet counter--><script type="text/javascript">new Image().src = "//counter.yadro.ru/hit?r" + escape(top.document.referrer) + ((typeof(screen)=="undefined")?"" : ";s"+screen.width+"*"+screen.height+"*" + (screen.colorDepth?screen.colorDepth:screen.pixelDepth)) + ";u"+escape(document.URL) + ";h"+escape(document.title.substring(0,80)) + ";" +Math.random();</script><!--/LiveInternet-->
+</body></html>

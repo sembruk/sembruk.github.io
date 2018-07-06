@@ -1,0 +1,75 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<style>
+body {font-family: "Arial Narrow"; font-size: 10pt;}
+table {font-family: "Arial Narrow"; font-size: 10pt; border:1px solid #AA0055; background: #DDDDAA;text-align: center;}
+table td{ margin:O; padding: 0 2px; background: #FFFFFF;}
+.rezult th { font-family: "Arial Narrow";font-style: italic; font-size: 10pt;color: #AA0055;padding: 2px 3px; background: #EEEEBB;}
+H1  {font-size: 14pt;font-weight: bold;color: #AA0055;text-align: left;}
+.yl, tr.yl td {background: #FFFFAA;}
+</style><title>Ранняя весна. Сплиты команды "ЭКСТРИМ"</title></head><body><h1>График движения команды 279. НАУМОВ ЕВГЕНИЙ</h1><table class="rezult"><tr><th>Путь</th><th>Время</th><th>Сплит</th><th>Очки</th><th>Расстояние (км)</th><th>Скорость (мин/км)</th></tr><tr><td>S - 30</td><td>05:36</td><td>05:36</td><td>3 / 3</td><td>0.37 / 0.37</td><td><strong>15:14</strong></td></tr><tr class="yl"><td>30 - 40</td><td>13:17</td><td>07:41</td><td>4 / 7</td><td>0.59 / 0.95</td><td><strong>13:07</strong></td></tr><tr><td>40 - 41</td><td>24:30</td><td>11:13</td><td>4 / 11</td><td>0.51 / 1.46</td><td><strong>22:10</strong></td></tr><tr class="yl"><td>41 - 31</td><td>32:23</td><td>07:53</td><td>3 / 14</td><td>0.36 / 1.82</td><td><strong>21:53</strong></td></tr><tr><td>31 - 50</td><td>39:44</td><td>07:21</td><td>5 / 19</td><td>0.38 / 2.20</td><td><strong>19:25</strong></td></tr><tr class="yl"><td>50 - 49</td><td>51:49</td><td>12:05</td><td>4 / 23</td><td>0.65 / 2.84</td><td><strong>18:42</strong></td></tr><tr><td>49 - 76</td><td>1:04:01</td><td>12:12</td><td>7 / 30</td><td>0.61 / 3.45</td><td><strong>20:05</strong></td></tr><tr class="yl"><td>76 - 47</td><td>1:24:54</td><td>20:53</td><td>4 / 34</td><td>0.79 / 4.24</td><td><strong>26:36</strong></td></tr><tr><td>47 - 86</td><td>1:36:22</td><td>11:28</td><td>8 / 42</td><td>0.78 / 5.01</td><td><strong>14:46</strong></td></tr><tr class="yl"><td>86 - 59</td><td>1:45:31</td><td>09:09</td><td>5 / 47</td><td>0.59 / 5.61</td><td><strong>15:24</strong></td></tr><tr><td>59 - 68</td><td>1:56:05</td><td>10:34</td><td>6 / 53</td><td>0.66 / 6.27</td><td><strong>15:57</strong></td></tr><tr class="yl"><td>68 - 79</td><td>2:06:01</td><td>09:56</td><td>7 / 60</td><td>0.72 / 6.99</td><td><strong>13:53</strong></td></tr><tr><td>79 - 85</td><td>2:16:28</td><td>10:27</td><td>8 / 68</td><td>0.65 / 7.64</td><td><strong>16:00</strong></td></tr><tr class="yl"><td>85 - 37</td><td>2:28:17</td><td>11:49</td><td>3 / 71</td><td>0.69 / 8.32</td><td><strong>17:15</strong></td></tr><tr><td>37 - 44</td><td>2:39:14</td><td>10:57</td><td>4 / 75</td><td>0.50 / 8.82</td><td><strong>21:58</strong></td></tr><tr class="yl"><td>44 - 35</td><td>2:54:21</td><td>15:07</td><td>3 / 78</td><td>0.60 / 9.42</td><td><strong>25:05</strong></td></tr><tr><td>35 - F</td><td>3:01:31</td><td>07:10</td><td>0 / 78</td><td>0.46 / 9.88</td><td><strong>15:39</strong></td></tr><tr><th>&nbsp;</th><th>3:01:31</th><th>&nbsp;</th><th>78</th><th>9.88 км</th><th><strong>18:22 мин/км</strong></th></tr></table><br><div style="position: relative"><div style="position: relative">медленно</div>
+<div style="position: absolute; top: 0; left: 500;">средне</div>
+<div style="position: absolute; top: 0; left: 940;">быстро</div>
+</div><canvas id="e" width="1000" height="610"></canvas>
+<script>
+var kp_list = [[26.52705061082,18.062827225131, "rgb(255,198,0)"],[-4.7120418848168,58.551483420593, "rgb(255,256,0)"],[38.91797556719,65.357766143106, "rgb(168,0,174)"],[53.664921465969,93.106457242583, "rgb(171,0,168)"],[78.708551483421,114.65968586387, "rgb(209,0,92)"],[27.83595113438,138.91797556719, "rgb(229,0,52)"],[-7.8534031413613,178.09773123909, "rgb(197,0,116)"],[-76.352530541012,176.96335078534, "rgb(127,0,256)"],[-139.61605584642,201.22164048866, "rgb(255,212,0)"],[-143.10645724258,149.47643979058, "rgb(255,192,0)"],[-145.37521815009,91.710296684119, "rgb(255,174,0)"],[-164.13612565445,32.198952879581, "rgb(255,236,0)"],[-107.15532286213,32.722513089005, "rgb(255,172,0)"],[-48.69109947644,45.200698080279, "rgb(255,118,0)"],[-31.937172774869,5.0610820244328, "rgb(170,0,170)"],[-4.3630017452007,-39.703315881326, "rgb(139,0,232)"],[0,0, "rgb(255,184,0)"],];
+var canvas = document.getElementById("e");
+var context = canvas.getContext("2d");
+var map = new Image();
+var c = [471.20418848168, 261.78010471204];
+map.src = "map.jpg";
+map.onload = function() {
+	context.drawImage(map, 0, 0);
+	for (i=0, l=kp_list.length; i<l; i++) {
+		context.beginPath();
+		context.arc(c[0] + kp_list[i][0], c[1] + kp_list[i][1], 4, 0, Math.PI * 2, false);
+		context.closePath();
+		context.strokeStyle = "#f00";
+		context.stroke();
+		context.fillStyle = "#f00";
+		context.fill();
+	}
+	context.lineWidth = 3;
+	var old_x = 0, old_y = 0;
+	for (i=0, l=kp_list.length; i<l; i++) {
+		context.beginPath();
+		context.moveTo(c[0] + old_x, c[1] + old_y);
+		context.lineTo(c[0] + kp_list[i][0], c[1] + kp_list[i][1]);
+		context.strokeStyle = kp_list[i][2];
+		context.stroke();
+		old_x = kp_list[i][0]; old_y = kp_list[i][1];
+	}
+	context.beginPath();
+	context.strokeStyle = "#f00";
+	var km_length = 87.260034904014;
+	context.moveTo(30,10);
+	context.lineTo(30,50);
+	context.moveTo(30,30);
+	context.lineTo(30+km_length,30);
+	context.moveTo(30+km_length,10);
+	context.lineTo(30+km_length,50);
+	context.stroke();
+	context.fillStyle = '#f00';
+	context.font = 'bold 30px sans-serif';
+	context.fillText('1 km', km_length/2, 40);
+	var lingrad = context.createLinearGradient(0,5,canvas.width,5);
+    lingrad.addColorStop(0, 'rgb(128,0,255)');
+    lingrad.addColorStop(0.5, 'rgb(255,0,0)');
+    lingrad.addColorStop(1, 'rgb(255,255,0)');
+	context.fillStyle = lingrad;
+    context.fillRect(0,0,canvas.width,10);
+};
+</script><script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script>
+<noscript><div><img src="//mc.yandex.ru/watch/1522145" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter --></noindex>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-6677572-12']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<!--LiveInternet counter--><script type="text/javascript">new Image().src = "//counter.yadro.ru/hit?r" + escape(top.document.referrer) + ((typeof(screen)=="undefined")?"" : ";s"+screen.width+"*"+screen.height+"*" + (screen.colorDepth?screen.colorDepth:screen.pixelDepth)) + ";u"+escape(document.URL) + ";h"+escape(document.title.substring(0,80)) + ";" +Math.random();</script><!--/LiveInternet-->
+</body></html>

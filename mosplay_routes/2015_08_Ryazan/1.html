@@ -1,0 +1,75 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<style>
+body {font-family: "Arial Narrow"; font-size: 10pt;}
+table {font-family: "Arial Narrow"; font-size: 10pt; border:1px solid #AA0055; background: #DDDDAA;text-align: center;}
+table td{ margin:O; padding: 0 2px; background: #FFFFFF;}
+.rezult th { font-family: "Arial Narrow";font-style: italic; font-size: 10pt;color: #AA0055;padding: 2px 3px; background: #EEEEBB;}
+H1  {font-size: 14pt;font-weight: bold;color: #AA0055;text-align: left;}
+.yl, tr.yl td {background: #FFFFAA;}
+</style><title>Рязанский рогейн. Сплиты команды "Волна"</title></head><body><h1>График движения команды 1. ВАКАРЕВА ЗОЯ</h1><table class="rezult"><tr><th>Путь</th><th>Время</th><th>Сплит</th><th>Очки</th><th>Расстояние (км)</th><th>Скорость (мин/км)</th></tr><tr><td>S - 21</td><td>12:29</td><td>12:29</td><td>2 / 2</td><td>0.52 / 0.52</td><td><strong>24:12</strong></td></tr><tr class="yl"><td>21 - 55</td><td>23:27</td><td>10:58</td><td>5 / 7</td><td>0.64 / 1.16</td><td><strong>17:07</strong></td></tr><tr><td>55 - 72</td><td>37:28</td><td>14:01</td><td>7 / 14</td><td>1.05 / 2.20</td><td><strong>13:22</strong></td></tr><tr class="yl"><td>72 - 35</td><td>44:53</td><td>07:25</td><td>3 / 17</td><td>0.61 / 2.81</td><td><strong>12:14</strong></td></tr><tr><td>35 - 66</td><td>55:10</td><td>10:17</td><td>6 / 23</td><td>0.84 / 3.65</td><td><strong>12:15</strong></td></tr><tr class="yl"><td>66 - 58</td><td>1:05:29</td><td>10:19</td><td>5 / 28</td><td>0.74 / 4.39</td><td><strong>13:53</strong></td></tr><tr><td>58 - 56</td><td>1:24:28</td><td>18:59</td><td>5 / 33</td><td>1.02 / 5.41</td><td><strong>18:36</strong></td></tr><tr class="yl"><td>56 - 65</td><td>1:34:54</td><td>10:26</td><td>6 / 39</td><td>0.73 / 6.14</td><td><strong>14:22</strong></td></tr><tr><td>65 - 54</td><td>1:51:48</td><td>16:54</td><td>5 / 44</td><td>0.80 / 6.94</td><td><strong>21:04</strong></td></tr><tr class="yl"><td>54 - 82</td><td>2:11:07</td><td>19:19</td><td>8 / 52</td><td>1.30 / 8.25</td><td><strong>14:48</strong></td></tr><tr><td>82 - 46</td><td>2:34:35</td><td>23:28</td><td>4 / 56</td><td>0.94 / 9.19</td><td><strong>24:53</strong></td></tr><tr class="yl"><td>46 - 63</td><td>2:48:45</td><td>14:10</td><td>6 / 62</td><td>0.80 / 9.99</td><td><strong>17:43</strong></td></tr><tr><td>63 - F</td><td>3:06:35</td><td>17:50</td><td>0 / 62</td><td>1.71 / 11.70</td><td><strong>10:26</strong></td></tr><tr><th>&nbsp;</th><th>3:06:35</th><th>&nbsp;</th><th>62</th><th>11.70 км</th><th><strong>15:57 мин/км</strong></th></tr></table><br><div style="position: relative"><div style="position: relative">медленно</div>
+<div style="position: absolute; top: 0; left: 463;">средне</div>
+<div style="position: absolute; top: 0; left: 866;">быстро</div>
+</div><canvas id="e" width="926" height="1300"></canvas>
+<script>
+var kp_list = [[9.6766848816029,64.511232544019, "rgb(132,0,246)"],[-39.351851851852,129.02246508804, "rgb(209,0,92)"],[33.22328476017,239.98178506375, "rgb(255,174,0)"],[98.70218579235,199.98482088646, "rgb(255,210,0)"],[203.21038251366,219.01563448695, "rgb(255,210,0)"],[294.81633272617,198.04948391014, "rgb(255,156,0)"],[211.27428658166,99.66985428051, "rgb(185,0,140)"],[302.88023679417,93.218731026108, "rgb(255,136,0)"],[323.52383120826,-6.1285670916818, "rgb(158,0,194)"],[386.42228293868,-158.69763205829, "rgb(255,116,0)"],[297.39678202793,-79.348816029144, "rgb(127,0,256)"],[215.46751669702,-19.998482088646, "rgb(198,0,114)"],[0.12649261283141,-0.12649261283141, "rgb(255,256,0)"],];
+var canvas = document.getElementById("e");
+var context = canvas.getContext("2d");
+var map = new Image();
+var c = [412.03703703704, 638.42592592593];
+map.src = "map.jpg";
+map.onload = function() {
+	context.drawImage(map, 0, 0);
+	for (i=0, l=kp_list.length; i<l; i++) {
+		context.beginPath();
+		context.arc(c[0] + kp_list[i][0], c[1] + kp_list[i][1], 4, 0, Math.PI * 2, false);
+		context.closePath();
+		context.strokeStyle = "#f00";
+		context.stroke();
+		context.fillStyle = "#f00";
+		context.fill();
+	}
+	context.lineWidth = 3;
+	var old_x = 0, old_y = 0;
+	for (i=0, l=kp_list.length; i<l; i++) {
+		context.beginPath();
+		context.moveTo(c[0] + old_x, c[1] + old_y);
+		context.lineTo(c[0] + kp_list[i][0], c[1] + kp_list[i][1]);
+		context.strokeStyle = kp_list[i][2];
+		context.stroke();
+		old_x = kp_list[i][0]; old_y = kp_list[i][1];
+	}
+	context.beginPath();
+	context.strokeStyle = "#f00";
+	var km_length = 126.49261283141;
+	context.moveTo(30,10);
+	context.lineTo(30,50);
+	context.moveTo(30,30);
+	context.lineTo(30+km_length,30);
+	context.moveTo(30+km_length,10);
+	context.lineTo(30+km_length,50);
+	context.stroke();
+	context.fillStyle = '#f00';
+	context.font = 'bold 30px sans-serif';
+	context.fillText('1 km', km_length/2, 40);
+	var lingrad = context.createLinearGradient(0,5,canvas.width,5);
+    lingrad.addColorStop(0, 'rgb(128,0,255)');
+    lingrad.addColorStop(0.5, 'rgb(255,0,0)');
+    lingrad.addColorStop(1, 'rgb(255,255,0)');
+	context.fillStyle = lingrad;
+    context.fillRect(0,0,canvas.width,10);
+};
+</script><script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script>
+<noscript><div><img src="//mc.yandex.ru/watch/1522145" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter --></noindex>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-6677572-12']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<!--LiveInternet counter--><script type="text/javascript">new Image().src = "//counter.yadro.ru/hit?r" + escape(top.document.referrer) + ((typeof(screen)=="undefined")?"" : ";s"+screen.width+"*"+screen.height+"*" + (screen.colorDepth?screen.colorDepth:screen.pixelDepth)) + ";u"+escape(document.URL) + ";h"+escape(document.title.substring(0,80)) + ";" +Math.random();</script><!--/LiveInternet-->
+</body></html>

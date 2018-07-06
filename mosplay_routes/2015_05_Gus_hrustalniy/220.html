@@ -1,0 +1,75 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<style>
+body {font-family: "Arial Narrow"; font-size: 10pt;}
+table {font-family: "Arial Narrow"; font-size: 10pt; border:1px solid #AA0055; background: #DDDDAA;text-align: center;}
+table td{ margin:O; padding: 0 2px; background: #FFFFFF;}
+.rezult th { font-family: "Arial Narrow";font-style: italic; font-size: 10pt;color: #AA0055;padding: 2px 3px; background: #EEEEBB;}
+H1  {font-size: 14pt;font-weight: bold;color: #AA0055;text-align: left;}
+.yl, tr.yl td {background: #FFFFAA;}
+</style><title>Гусь хрустальный. Сплиты команды "Гусь-Хрустальный"</title></head><body><h1>График движения команды 220. ДУМЧЕВ ДЕНИС</h1><table class="rezult"><tr><th>Путь</th><th>Время</th><th>Сплит</th><th>Очки</th><th>Расстояние (км)</th><th>Скорость (мин/км)</th></tr><tr><td>S - 11</td><td>08:40</td><td>08:40</td><td>1 / 1</td><td>0.37 / 0.37</td><td><strong>23:24</strong></td></tr><tr class="yl"><td>11 - 29</td><td>38:59</td><td>30:19</td><td>2 / 3</td><td>0.37 / 0.74</td><td><strong>81:22</strong></td></tr><tr><td>29 - 28</td><td>43:34</td><td>04:35</td><td>2 / 5</td><td>0.18 / 0.92</td><td><strong>25:52</strong></td></tr><tr class="yl"><td>28 - 23</td><td>46:28</td><td>02:54</td><td>2 / 7</td><td>0.31 / 1.23</td><td><strong>9:19</strong></td></tr><tr><td>23 - 21</td><td>52:07</td><td>05:39</td><td>2 / 9</td><td>0.60 / 1.83</td><td><strong>9:25</strong></td></tr><tr class="yl"><td>21 - 22</td><td>59:34</td><td>07:27</td><td>2 / 11</td><td>0.76 / 2.59</td><td><strong>9:47</strong></td></tr><tr><td>22 - 13</td><td>1:08:24</td><td>08:50</td><td>1 / 12</td><td>0.44 / 3.03</td><td><strong>20:02</strong></td></tr><tr class="yl"><td>13 - F</td><td>1:18:16</td><td>09:52</td><td>0 / 12</td><td>0.61 / 3.64</td><td><strong>16:08</strong></td></tr><tr class="yl"><th>&nbsp;</th><th>1:18:16</th><th>&nbsp;</th><th>12</th><th>3.64 км</th><th><strong>21:28 мин/км</strong></th></tr></table><br><div style="position: relative"><div style="position: relative">медленно</div>
+<div style="position: absolute; top: 0; left: 421.5;">средне</div>
+<div style="position: absolute; top: 0; left: 783;">быстро</div>
+</div><canvas id="e" width="843" height="1200"></canvas>
+<script>
+var kp_list = [[-42.199617941936,33.692812829514, "rgb(232,0,46)"],[-63.789745243162,-16.160664777629, "rgb(127,0,256)"],[-82.396237393698,1.7576162180547, "rgb(220,0,70)"],[-109.26567304026,-34.769482781758, "rgb(255,256,0)"],[-188.51538972251,2.2010709691402, "rgb(255,254,0)"],[-122.5881800014,91.557498025524, "rgb(255,252,0)"],[-68.607297138297,56.655410442386, "rgb(255,88,0)"],[0.11496314288535,-0.17118245483863, "rgb(255,170,0)"],];
+var canvas = document.getElementById("e");
+var context = canvas.getContext("2d");
+var map = new Image();
+var c = [505.95382746051, 1032.3207776428];
+map.src = "map.jpg";
+map.onload = function() {
+	context.drawImage(map, 0, 0);
+	for (i=0, l=kp_list.length; i<l; i++) {
+		context.beginPath();
+		context.arc(c[0] + kp_list[i][0], c[1] + kp_list[i][1], 4, 0, Math.PI * 2, false);
+		context.closePath();
+		context.strokeStyle = "#f00";
+		context.stroke();
+		context.fillStyle = "#f00";
+		context.fill();
+	}
+	context.lineWidth = 3;
+	var old_x = 0, old_y = 0;
+	for (i=0, l=kp_list.length; i<l; i++) {
+		context.beginPath();
+		context.moveTo(c[0] + old_x, c[1] + old_y);
+		context.lineTo(c[0] + kp_list[i][0], c[1] + kp_list[i][1]);
+		context.strokeStyle = kp_list[i][2];
+		context.stroke();
+		old_x = kp_list[i][0]; old_y = kp_list[i][1];
+	}
+	context.beginPath();
+	context.strokeStyle = "#f00";
+	var km_length = 145.80801944107;
+	context.moveTo(30,10);
+	context.lineTo(30,50);
+	context.moveTo(30,30);
+	context.lineTo(30+km_length,30);
+	context.moveTo(30+km_length,10);
+	context.lineTo(30+km_length,50);
+	context.stroke();
+	context.fillStyle = '#f00';
+	context.font = 'bold 30px sans-serif';
+	context.fillText('1 km', km_length/2, 40);
+	var lingrad = context.createLinearGradient(0,5,canvas.width,5);
+    lingrad.addColorStop(0, 'rgb(128,0,255)');
+    lingrad.addColorStop(0.5, 'rgb(255,0,0)');
+    lingrad.addColorStop(1, 'rgb(255,255,0)');
+	context.fillStyle = lingrad;
+    context.fillRect(0,0,canvas.width,10);
+};
+</script><script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script>
+<noscript><div><img src="//mc.yandex.ru/watch/1522145" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter --></noindex>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-6677572-12']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<!--LiveInternet counter--><script type="text/javascript">new Image().src = "//counter.yadro.ru/hit?r" + escape(top.document.referrer) + ((typeof(screen)=="undefined")?"" : ";s"+screen.width+"*"+screen.height+"*" + (screen.colorDepth?screen.colorDepth:screen.pixelDepth)) + ";u"+escape(document.URL) + ";h"+escape(document.title.substring(0,80)) + ";" +Math.random();</script><!--/LiveInternet-->
+</body></html>

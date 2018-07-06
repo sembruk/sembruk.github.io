@@ -1,0 +1,79 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1251"><meta content="text/html" ;="" charset="windows-1251" http-equiv="Content-Type">
+<style>
+body {font-family: 'Arial Narrow'; font-size: 10pt;}
+table.rezult {font-family: 'Arial Narrow'; font-size: 10pt; border:1px solid #AA0055; background: #DDDDAA;text-align: center;}
+table.rezult td{ margin:O; padding: 0 2px; background: #FFFFFF;}
+.rezult th { font-family: "Arial Narrow";font-style: italic; font-size: 10pt;color: #AA0055;padding: 2px 3px; background: #EEEEBB;}
+H1  {font-size: 14pt;font-weight: bold;color: #AA0055;text-align: left;}
+.yl, tr.yl td {background: #FFFFAA;}
+</style>
+<!--[if IE]><script src="excanvas.js"></script><![endif]-->
+</head><body><h1>Протокол результатов (график движения команды). ПЕТУХОВ ОЛЕГ / ПЕТУХОВА ДАРЬЯ</h1><table class="rezult"><tr style="background: #FFFFFF;"><th>Путь</th><th>Время</th><th>Сплит</th><th>Очки</th><th>Расстояние (км)</th><th>Скорость (мин/км)</th><th>Мин/очко</th></tr><tr class="yl"><td>S - 52</td><td>18:29</td><td>18:29</td><td>5 / 5</td><td>1.80</td><td>10.25</td><td>3.70</td></tr><tr style="background: #FFFFFF;"><td>52 - 75</td><td>36:35</td><td>18:06</td><td>7 / 12</td><td>0.92</td><td>19.75</td><td>2.59</td></tr><tr class="yl"><td>75 - 66</td><td>59:37</td><td>23:02</td><td>6 / 18</td><td>1.33</td><td>17.30</td><td>3.84</td></tr><tr style="background: #FFFFFF;"><td>66 - 56</td><td>1:15:27</td><td>15:50</td><td>5 / 23</td><td>0.80</td><td>19.81</td><td>3.17</td></tr><tr class="yl"><td>56 - 73</td><td>1:52:30</td><td>37:03</td><td>7 / 30</td><td>2.09</td><td>17.76</td><td>5.29</td></tr><tr style="background: #FFFFFF;"><td>73 - 83</td><td>3:15:48</td><td>1:23:18</td><td>8 / 38</td><td>2.45</td><td>34.04</td><td>10.41</td></tr><tr class="yl"><td>83 - 68</td><td>3:42:23</td><td>26:35</td><td>6 / 44</td><td>1.28</td><td>20.76</td><td>4.43</td></tr><tr style="background: #FFFFFF;"><td>68 - 74</td><td>4:13:26</td><td>31:03</td><td>7 / 51</td><td>1.32</td><td>23.52</td><td>4.44</td></tr><tr class="yl"><td>74 - 40</td><td>4:55:14</td><td>41:48</td><td>4 / 55</td><td>3.60</td><td>11.61</td><td>10.45</td></tr><tr style="background: #FFFFFF;"><td>40 - 38</td><td>5:08:17</td><td>13:03</td><td>3 / 58</td><td>0.62</td><td>21.12</td><td>4.35</td></tr><tr class="yl"><td>38 - 48</td><td>5:19:00</td><td>10:43</td><td>4 / 62</td><td>0.90</td><td>11.88</td><td>2.68</td></tr><tr style="background: #FFFFFF;"><td>48 - 31</td><td>5:47:26</td><td>28:26</td><td>3 / 65</td><td>2.07</td><td>13.71</td><td>9.48</td></tr><tr class="yl"><td>31 - F</td><td>5:57:52</td><td>10:26</td><td>0 / 65</td><td>0.48</td><td>21.96</td><td>&nbsp;</td></tr><tr style="background: #FFFFFF;"><th>&nbsp;</th><th>5:57:52</th><th>&nbsp;</th><th>65</th><th>19.65</th><th>18.21</th><th>5.51</th></tr></table><br><br><canvas id="e" width="873" height="1242"></canvas>
+<script>
+var kp_list = [[504.474,752.5525],[559.7565,679.441],[574.9395,547.1725],[651.4215,570.3565],[443.364,555.4885],[205.3815,612.5665],[236.283,488.299],[287.5965,366.646],[230.3295,722.155],[223.62,783.58],[133.4355,780.3985],[334.185,832.72],[366,868],];
+var canvas = document.getElementById("e");
+var context = canvas.getContext("2d");
+var map = new Image();
+map.src = "map.gif";
+map.onload = function() { context.drawImage(map, 0, 0);
+	for (i=0, l=kp_list.length; i<l; i++) {
+		context.beginPath();
+		context.arc(kp_list[i][0], kp_list[i][1], 4, 0, Math.PI * 2, false);
+		context.closePath();
+		context.strokeStyle = "#f00";
+		context.stroke();
+		context.fillStyle = "#f00";
+		context.fill();
+	}
+	context.beginPath();
+	context.moveTo(366,868);
+	for (i=0, l=kp_list.length; i<l; i++) {
+		context.lineTo(kp_list[i][0], kp_list[i][1]);
+	}
+	context.strokeStyle = "#f00";
+	var km_length = 100;
+	context.moveTo(30,10);
+	context.lineTo(30,50);
+	context.moveTo(30,30);
+	context.lineTo(30+km_length,30);
+	context.moveTo(30+km_length,10);
+	context.lineTo(30+km_length,50);
+	context.stroke();
+	context.fillStyle = '#f00';
+	context.font = 'bold 30px sans-serif';
+	context.strokeText('1 km', km_length/2, 40);
+};
+
+context.beginPath();
+context.arc(100, 100, 5, 0, Math.PI * 2, false);
+context.closePath();
+context.strokeStyle = "#f00";
+context.stroke();
+
+</script>
+<!-- Yandex.Metrika counter -->
+<noindex><div style="display:none;"><script type="text/javascript">
+(function(w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter1522145 = new Ya.Metrika({id:1522145, enableAll: true, trackHash:true});
+        }
+        catch(e) { }
+    });
+})(window, "yandex_metrika_callbacks");
+</script></div>
+<script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script>
+<noscript><div><img src="//mc.yandex.ru/watch/1522145" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter --></noindex>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-6677572-12']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<!--LiveInternet counter--><script type="text/javascript">new Image().src = "//counter.yadro.ru/hit?r" + escape(top.document.referrer) + ((typeof(screen)=="undefined")?"" : ";s"+screen.width+"*"+screen.height+"*" + (screen.colorDepth?screen.colorDepth:screen.pixelDepth)) + ";u"+escape(document.URL) + ";h"+escape(document.title.substring(0,80)) + ";" +Math.random();</script><!--/LiveInternet-->
+</body></html>

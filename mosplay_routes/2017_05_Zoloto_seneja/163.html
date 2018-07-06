@@ -1,0 +1,75 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<style>
+body {font-family: "Arial Narrow"; font-size: 10pt;}
+table {font-family: "Arial Narrow"; font-size: 10pt; border:1px solid #AA0055; background: #DDDDAA;text-align: center;}
+table td{ margin:O; padding: 0 2px; background: #FFFFFF;}
+.rezult th { font-family: "Arial Narrow";font-style: italic; font-size: 10pt;color: #AA0055;padding: 2px 3px; background: #EEEEBB;}
+H1  {font-size: 14pt;font-weight: bold;color: #AA0055;text-align: left;}
+.yl, tr.yl td {background: #FFFFAA;}
+</style><title>Золото Сенежа (суша). Сплиты команды "Squirrels"</title></head><body><h1>График движения команды 163. Ефремова Антонина, Князева Кристина</h1><table class="rezult"><tr><th>Путь</th><th>Время</th><th>Сплит</th><th>Очки</th><th>Расстояние (км)</th><th>Скорость (мин/км)</th></tr><tr class="yl"><td>S - 30 - 40</td><td>17:34</td><td>17:34</td><td>4 / 7</td><td>2.00 / 2.00</td><td><strong>12:52</strong></td></tr><tr><td>40 - 51</td><td>37:48</td><td>20:14</td><td>5 / 12</td><td>1.47 / 3.46</td><td><strong>13:47</strong></td></tr><tr class="yl"><td>51 - 88</td><td>51:55</td><td>14:07</td><td>8 / 20</td><td>0.75 / 4.21</td><td><strong>18:46</strong></td></tr><tr><td>88 - 50</td><td>1:03:52</td><td>11:57</td><td>5 / 25</td><td>1.17 / 5.38</td><td><strong>10:14</strong></td></tr><tr class="yl"><td>50 - 33</td><td>1:16:51</td><td>12:59</td><td>3 / 28</td><td>1.25 / 6.63</td><td><strong>10:26</strong></td></tr><tr><td>33 - 39</td><td>1:36:53</td><td>20:02</td><td>3 / 31</td><td>1.04 / 7.67</td><td><strong>19:18</strong></td></tr><tr class="yl"><td>39 - 31</td><td>1:48:53</td><td>12:00</td><td>3 / 34</td><td>0.65 / 8.32</td><td><strong>18:29</strong></td></tr><tr><td>31 - 48</td><td>2:03:23</td><td>14:30</td><td>4 / 38</td><td>1.17 / 9.48</td><td><strong>12:26</strong></td></tr><tr class="yl"><td>48 - 81</td><td>2:21:56</td><td>18:33</td><td>8 / 46</td><td>0.86 / 10.34</td><td><strong>21:41</strong></td></tr><tr><td>81 - 53</td><td>2:46:56</td><td>25:00</td><td>5 / 51</td><td>1.15 / 11.49</td><td><strong>21:43</strong></td></tr><tr class="yl"><td>53 - 49</td><td>3:07:19</td><td>20:23</td><td>4 / 55</td><td>0.65 / 12.13</td><td><strong>31:30</strong></td></tr><tr><td>49 - F</td><td>3:53:02</td><td>45:43</td><td>0 / 55</td><td>3.99 / 16.13</td><td><strong>11:27</strong></td></tr><tr><th>&nbsp;</th><th>3:53:02</th><th>&nbsp;</th><th>55</th><th>16.13 км</th><th><strong>14:27 мин/км</strong></th></tr></table><br><div style="position: relative"><div style="position: relative">медленно</div>
+<div style="position: absolute; top: 0; left: 424.5;">средне</div>
+<div style="position: absolute; top: 0; left: 789;">быстро</div>
+</div><canvas id="e" width="849" height="1200"></canvas>
+<script>
+var kp_list = [[28.47879083374,-54.412481716236, "rgb(255,156,0)"],[2.8961482203803,-185.09019990249, "rgb(255,156,0)"],[-68.746952705997,-308.93710385178, "rgb(255,102,0)"],[-87.469527059971,-379.86348122867, "rgb(191,0,128)"],[23.417844953681,-405.78254509995, "rgb(255,256,0)"],[33.861530960507,-284.81716235982, "rgb(255,250,0)"],[92.545099951243,-202.36470014627, "rgb(187,0,136)"],[114.50024378352,-142.96440760605, "rgb(193,0,124)"],[214.22720624086,-88.244758654315, "rgb(255,178,0)"],[282.27206240858,-40.004875670405, "rgb(172,0,166)"],[321.51633349586,65.134080936129, "rgb(171,0,168)"],[384.51487079473,61.52120916626, "rgb(127,0,256)"],[0.097513408093613,-0.097513408093613, "rgb(255,216,0)"],];
+var canvas = document.getElementById("e");
+var context = canvas.getContext("2d");
+var map = new Image();
+var c = [108.23988298391, 736.61628473915];
+map.src = "map.jpg";
+map.onload = function() {
+	context.drawImage(map, 0, 0);
+	for (i=0, l=kp_list.length; i<l; i++) {
+		context.beginPath();
+		context.arc(c[0] + kp_list[i][0], c[1] + kp_list[i][1], 4, 0, Math.PI * 2, false);
+		context.closePath();
+		context.strokeStyle = "#f00";
+		context.stroke();
+		context.fillStyle = "#f00";
+		context.fill();
+	}
+	context.lineWidth = 3;
+	var old_x = 0, old_y = 0;
+	for (i=0, l=kp_list.length; i<l; i++) {
+		context.beginPath();
+		context.moveTo(c[0] + old_x, c[1] + old_y);
+		context.lineTo(c[0] + kp_list[i][0], c[1] + kp_list[i][1]);
+		context.strokeStyle = kp_list[i][2];
+		context.stroke();
+		old_x = kp_list[i][0]; old_y = kp_list[i][1];
+	}
+	context.beginPath();
+	context.strokeStyle = "#f00";
+	var km_length = 97.513408093613;
+	context.moveTo(30,10);
+	context.lineTo(30,50);
+	context.moveTo(30,30);
+	context.lineTo(30+km_length,30);
+	context.moveTo(30+km_length,10);
+	context.lineTo(30+km_length,50);
+	context.stroke();
+	context.fillStyle = '#f00';
+	context.font = 'bold 30px sans-serif';
+	context.fillText('1 km', km_length/2, 40);
+	var lingrad = context.createLinearGradient(0,5,canvas.width,5);
+    lingrad.addColorStop(0, 'rgb(128,0,255)');
+    lingrad.addColorStop(0.5, 'rgb(255,0,0)');
+    lingrad.addColorStop(1, 'rgb(255,255,0)');
+	context.fillStyle = lingrad;
+    context.fillRect(0,0,canvas.width,10);
+};
+</script><script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script>
+<noscript><div><img src="//mc.yandex.ru/watch/1522145" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter --></noindex>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-6677572-12']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<!--LiveInternet counter--><script type="text/javascript">new Image().src = "//counter.yadro.ru/hit?r" + escape(top.document.referrer) + ((typeof(screen)=="undefined")?"" : ";s"+screen.width+"*"+screen.height+"*" + (screen.colorDepth?screen.colorDepth:screen.pixelDepth)) + ";u"+escape(document.URL) + ";h"+escape(document.title.substring(0,80)) + ";" +Math.random();</script><!--/LiveInternet-->
+</body></html>

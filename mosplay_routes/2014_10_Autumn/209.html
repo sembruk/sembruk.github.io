@@ -1,0 +1,75 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<style>
+body {font-family: "Arial Narrow"; font-size: 10pt;}
+table {font-family: "Arial Narrow"; font-size: 10pt; border:1px solid #AA0055; background: #DDDDAA;text-align: center;}
+table td{ margin:O; padding: 0 2px; background: #FFFFFF;}
+.rezult th { font-family: "Arial Narrow";font-style: italic; font-size: 10pt;color: #AA0055;padding: 2px 3px; background: #EEEEBB;}
+H1  {font-size: 14pt;font-weight: bold;color: #AA0055;text-align: left;}
+.yl, tr.yl td {background: #FFFFAA;}
+</style><title>Золотая осень. Сплиты команды "Дядя Sam"</title></head><body><h1>График движения команды 209. КУЛИКОВ СЕМЁН</h1><table class="rezult"><tr><th>Путь</th><th>Время</th><th>Сплит</th><th>Очки</th><th>Расстояние (км)</th><th>Скорость (мин/км)</th></tr><tr><td>S - 35</td><td>06:04</td><td>06:04</td><td>3 / 3</td><td>0.76 / 0.76</td><td><strong>7:57</strong></td></tr><tr class="yl"><td>35 - 79</td><td>26:26</td><td>20:22</td><td>7 / 10</td><td>1.71 / 2.47</td><td><strong>11:56</strong></td></tr><tr><td>79 - 86</td><td>34:26</td><td>08:00</td><td>8 / 18</td><td>0.75 / 3.22</td><td><strong>10:40</strong></td></tr><tr class="yl"><td>86 - 57</td><td>42:55</td><td>08:29</td><td>5 / 23</td><td>0.85 / 4.07</td><td><strong>9:56</strong></td></tr><tr><td>57 - 49</td><td>52:02</td><td>09:07</td><td>4 / 27</td><td>0.96 / 5.03</td><td><strong>9:30</strong></td></tr><tr class="yl"><td>49 - 66</td><td>1:01:10</td><td>09:08</td><td>6 / 33</td><td>0.99 / 6.02</td><td><strong>9:14</strong></td></tr><tr><td>66 - 44</td><td>1:21:42</td><td>20:32</td><td>4 / 37</td><td>1.70 / 7.72</td><td><strong>12:04</strong></td></tr><tr class="yl"><td>44 - 83</td><td>1:43:33</td><td>21:51</td><td>8 / 45</td><td>1.25 / 8.97</td><td><strong>17:30</strong></td></tr><tr><td>83 - 65</td><td>1:59:25</td><td>15:52</td><td>6 / 51</td><td>0.96 / 9.93</td><td><strong>16:34</strong></td></tr><tr class="yl"><td>65 - 33</td><td>2:18:20</td><td>18:55</td><td>3 / 54</td><td>0.84 / 10.77</td><td><strong>22:30</strong></td></tr><tr><td>33 - 73</td><td>2:53:05</td><td>34:45</td><td>7 / 61</td><td>1.50 / 12.27</td><td><strong>23:14</strong></td></tr><tr class="yl"><td>73 - 51</td><td>3:11:32</td><td>18:27</td><td>5 / 66</td><td>1.59 / 13.86</td><td><strong>11:36</strong></td></tr><tr><td>51 - 47</td><td>3:32:14</td><td>20:42</td><td>4 / 70</td><td>2.04 / 15.90</td><td><strong>10:09</strong></td></tr><tr class="yl"><td>47 - 37</td><td>3:45:51</td><td>13:37</td><td>3 / 73</td><td>0.88 / 16.78</td><td><strong>15:28</strong></td></tr><tr><td>37 - 69</td><td>4:18:25</td><td>32:34</td><td>6 / 79</td><td>0.92 / 17.70</td><td><strong>35:24</strong></td></tr><tr class="yl"><td>69 - 36</td><td>4:51:33</td><td>33:08</td><td>3 / 82</td><td>1.83 / 19.53</td><td><strong>18:05</strong></td></tr><tr><td>36 - 38</td><td>4:59:26</td><td>07:53</td><td>3 / 85</td><td>0.86 / 20.39</td><td><strong>9:13</strong></td></tr><tr class="yl"><td>38 - 50</td><td>5:12:11</td><td>12:45</td><td>5 / 90</td><td>1.51 / 21.90</td><td><strong>8:25</strong></td></tr><tr><td>50 - F</td><td>5:46:38</td><td>34:27</td><td>0 / 90</td><td>1.57 / 23.47</td><td><strong>21:54</strong></td></tr><tr><th>&nbsp;</th><th>5:46:38</th><th>&nbsp;</th><th>90</th><th>23.47 км</th><th><strong>14:46 мин/км</strong></th></tr></table><br><div style="position: relative"><div style="position: relative">медленно</div>
+<div style="position: absolute; top: 0; left: 600;">средне</div>
+<div style="position: absolute; top: 0; left: 1140;">быстро</div>
+</div><canvas id="e" width="1200" height="845"></canvas>
+<script>
+var kp_list = [[12.844660194175,72.969902912621, "rgb(255,256,0)"],[-97.588834951456,196.46213592233, "rgb(255,164,0)"],[-127.9572815534,130.31213592233, "rgb(255,198,0)"],[-195.88106796117,177.86796116505, "rgb(255,216,0)"],[-239.91990291262,95.692718446602, "rgb(255,226,0)"],[-333.62475728155,74.743689320388, "rgb(255,230,0)"],[-341.72912621359,239.79757281553, "rgb(255,162,0)"],[-456.93349514563,201.90582524272, "rgb(208,0,94)"],[-419.77572815534,116.67233009709, "rgb(217,0,76)"],[-460.02233009709,45.659708737864, "rgb(177,0,156)"],[-340.38349514563,-36.699029126214, "rgb(173,0,164)"],[-270.71650485437,-174.41213592233, "rgb(255,174,0)"],[-154.50291262136,-13.976213592233, "rgb(255,210,0)"],[-71.410194174757,-33.977184466019, "rgb(231,0,48)"],[-114.10339805825,44.497572815534, "rgb(127,0,256)"],[60.950970873786,12.538834951456, "rgb(204,0,102)"],[141.75,31.805825242718, "rgb(255,232,0)"],[47.892233009709,144.93058252427, "rgb(255,246,0)"],[0.097087378640777,-0.097087378640777, "rgb(180,0,150)"],];
+var canvas = document.getElementById("e");
+var context = canvas.getContext("2d");
+var map = new Image();
+var c = [551.45631067961, 454.36893203883];
+map.src = "map.jpg";
+map.onload = function() {
+	context.drawImage(map, 0, 0);
+	for (i=0, l=kp_list.length; i<l; i++) {
+		context.beginPath();
+		context.arc(c[0] + kp_list[i][0], c[1] + kp_list[i][1], 4, 0, Math.PI * 2, false);
+		context.closePath();
+		context.strokeStyle = "#f00";
+		context.stroke();
+		context.fillStyle = "#f00";
+		context.fill();
+	}
+	context.lineWidth = 3;
+	var old_x = 0, old_y = 0;
+	for (i=0, l=kp_list.length; i<l; i++) {
+		context.beginPath();
+		context.moveTo(c[0] + old_x, c[1] + old_y);
+		context.lineTo(c[0] + kp_list[i][0], c[1] + kp_list[i][1]);
+		context.strokeStyle = kp_list[i][2];
+		context.stroke();
+		old_x = kp_list[i][0]; old_y = kp_list[i][1];
+	}
+	context.beginPath();
+	context.strokeStyle = "#f00";
+	var km_length = 97.087378640777;
+	context.moveTo(30,10);
+	context.lineTo(30,50);
+	context.moveTo(30,30);
+	context.lineTo(30+km_length,30);
+	context.moveTo(30+km_length,10);
+	context.lineTo(30+km_length,50);
+	context.stroke();
+	context.fillStyle = '#f00';
+	context.font = 'bold 30px sans-serif';
+	context.fillText('1 km', km_length/2, 40);
+	var lingrad = context.createLinearGradient(0,5,canvas.width,5);
+    lingrad.addColorStop(0, 'rgb(128,0,255)');
+    lingrad.addColorStop(0.5, 'rgb(255,0,0)');
+    lingrad.addColorStop(1, 'rgb(255,255,0)');
+	context.fillStyle = lingrad;
+    context.fillRect(0,0,canvas.width,10);
+};
+</script><script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script>
+<noscript><div><img src="//mc.yandex.ru/watch/1522145" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter --></noindex>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-6677572-12']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<!--LiveInternet counter--><script type="text/javascript">new Image().src = "//counter.yadro.ru/hit?r" + escape(top.document.referrer) + ((typeof(screen)=="undefined")?"" : ";s"+screen.width+"*"+screen.height+"*" + (screen.colorDepth?screen.colorDepth:screen.pixelDepth)) + ";u"+escape(document.URL) + ";h"+escape(document.title.substring(0,80)) + ";" +Math.random();</script><!--/LiveInternet-->
+</body></html>

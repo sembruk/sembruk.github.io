@@ -1,0 +1,75 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<style>
+body {font-family: "Arial Narrow"; font-size: 10pt;}
+table {font-family: "Arial Narrow"; font-size: 10pt; border:1px solid #AA0055; background: #DDDDAA;text-align: center;}
+table td{ margin:O; padding: 0 2px; background: #FFFFFF;}
+.rezult th { font-family: "Arial Narrow";font-style: italic; font-size: 10pt;color: #AA0055;padding: 2px 3px; background: #EEEEBB;}
+H1  {font-size: 14pt;font-weight: bold;color: #AA0055;text-align: left;}
+.yl, tr.yl td {background: #FFFFAA;}
+</style><title>Рязанский рогейн. Сплиты команды "модуль инвертора"</title></head><body><h1>График движения команды 160. ДЖАНИКЯН ЛЮБОВЬ, ДЖАНИКЯН ПЕТР</h1><table class="rezult"><tr><th>Путь</th><th>Время</th><th>Сплит</th><th>Очки</th><th>Расстояние (км)</th><th>Скорость (мин/км)</th></tr><tr><td>S - 12</td><td>04:52</td><td>04:52</td><td>1 / 1</td><td>0.69 / 0.69</td><td><strong>7:02</strong></td></tr><tr class="yl"><td>12 - 32</td><td>13:29</td><td>08:37</td><td>3 / 4</td><td>0.65 / 1.34</td><td><strong>13:17</strong></td></tr><tr><td>32 - 64</td><td>43:27</td><td>29:58</td><td>6 / 10</td><td>1.86 / 3.20</td><td><strong>16:09</strong></td></tr><tr class="yl"><td>64 - 83</td><td>1:04:36</td><td>21:09</td><td>8 / 18</td><td>1.03 / 4.23</td><td><strong>20:28</strong></td></tr><tr><td>83 - 56</td><td>1:33:15</td><td>28:39</td><td>5 / 23</td><td>1.20 / 5.43</td><td><strong>23:53</strong></td></tr><tr class="yl"><td>56 - 57</td><td>1:48:32</td><td>15:17</td><td>5 / 28</td><td>1.72 / 7.15</td><td><strong>8:52</strong></td></tr><tr><td>57 - 72</td><td>2:13:25</td><td>24:53</td><td>7 / 35</td><td>0.87 / 8.03</td><td><strong>28:27</strong></td></tr><tr class="yl"><td>72 - 55</td><td>2:31:03</td><td>17:38</td><td>5 / 40</td><td>0.91 / 8.94</td><td><strong>19:20</strong></td></tr><tr><td>55 - 91</td><td>2:46:57</td><td>15:54</td><td>9 / 49</td><td>1.55 / 10.49</td><td><strong>10:16</strong></td></tr><tr class="yl"><td>91 - 44</td><td>3:10:23</td><td>23:26</td><td>4 / 53</td><td>1.48 / 11.97</td><td><strong>15:52</strong></td></tr><tr><td>44 - 63</td><td>3:24:32</td><td>14:09</td><td>6 / 59</td><td>0.98 / 12.95</td><td><strong>14:24</strong></td></tr><tr class="yl"><td>63 - F</td><td>5:00:54</td><td>1:36:22</td><td>0 / 59</td><td>3.23 / 16.18</td><td><strong>29:52</strong></td></tr><tr class="yl"><th>&nbsp;</th><th>5:00:54</th><th>&nbsp;</th><th>59</th><th>16.18 км</th><th><strong>18:36 мин/км</strong></th></tr></table><br><div style="position: relative"><div style="position: relative">медленно</div>
+<div style="position: absolute; top: 0; left: 400.5;">средне</div>
+<div style="position: absolute; top: 0; left: 741;">быстро</div>
+</div><canvas id="e" width="801" height="1100"></canvas>
+<script>
+var kp_list = [[-2.1668675231729,81.020407897709, "rgb(255,256,0)"],[-62.718503071646,126.86147530868, "rgb(255,174,0)"],[84.054590668784,286.85891987446, "rgb(255,118,0)"],[38.015645068842,398.65055131712, "rgb(203,0,104)"],[178.18848684698,390.2300738115, "rgb(167,0,176)"],[57.791133458389,552.20914146015, "rgb(255,234,0)"],[-32.974571717554,504.90712423436, "rgb(135,0,240)"],[-114.49038538598,435.94764492894, "rgb(222,0,66)"],[-232.8570012936,573.18595332877, "rgb(255,218,0)"],[-260.69369146026,402.52678183876, "rgb(255,124,0)"],[-242.89982615358,288.91492485277, "rgb(255,154,0)"],[0.10979363689376,-0.1238277660698, "rgb(127,0,256)"],];
+var canvas = document.getElementById("e");
+var context = canvas.getContext("2d");
+var map = new Image();
+var c = [322.85, 447.7];
+map.src = "map.jpg";
+map.onload = function() {
+	context.drawImage(map, 0, 0);
+	for (i=0, l=kp_list.length; i<l; i++) {
+		context.beginPath();
+		context.arc(c[0] + kp_list[i][0], c[1] + kp_list[i][1], 4, 0, Math.PI * 2, false);
+		context.closePath();
+		context.strokeStyle = "#f00";
+		context.stroke();
+		context.fillStyle = "#f00";
+		context.fill();
+	}
+	context.lineWidth = 3;
+	var old_x = 0, old_y = 0;
+	for (i=0, l=kp_list.length; i<l; i++) {
+		context.beginPath();
+		context.moveTo(c[0] + old_x, c[1] + old_y);
+		context.lineTo(c[0] + kp_list[i][0], c[1] + kp_list[i][1]);
+		context.strokeStyle = kp_list[i][2];
+		context.stroke();
+		old_x = kp_list[i][0]; old_y = kp_list[i][1];
+	}
+	context.beginPath();
+	context.strokeStyle = "#f00";
+	var km_length = 117.02127659574;
+	context.moveTo(30,10);
+	context.lineTo(30,50);
+	context.moveTo(30,30);
+	context.lineTo(30+km_length,30);
+	context.moveTo(30+km_length,10);
+	context.lineTo(30+km_length,50);
+	context.stroke();
+	context.fillStyle = '#f00';
+	context.font = 'bold 30px sans-serif';
+	context.fillText('1 km', km_length/2, 40);
+	var lingrad = context.createLinearGradient(0,5,canvas.width,5);
+    lingrad.addColorStop(0, 'rgb(128,0,255)');
+    lingrad.addColorStop(0.5, 'rgb(255,0,0)');
+    lingrad.addColorStop(1, 'rgb(255,255,0)');
+	context.fillStyle = lingrad;
+    context.fillRect(0,0,canvas.width,10);
+};
+</script><script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script>
+<noscript><div><img src="//mc.yandex.ru/watch/1522145" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter --></noindex>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-6677572-12']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<!--LiveInternet counter--><script type="text/javascript">new Image().src = "//counter.yadro.ru/hit?r" + escape(top.document.referrer) + ((typeof(screen)=="undefined")?"" : ";s"+screen.width+"*"+screen.height+"*" + (screen.colorDepth?screen.colorDepth:screen.pixelDepth)) + ";u"+escape(document.URL) + ";h"+escape(document.title.substring(0,80)) + ";" +Math.random();</script><!--/LiveInternet-->
+</body></html>

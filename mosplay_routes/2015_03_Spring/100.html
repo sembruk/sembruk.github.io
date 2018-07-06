@@ -1,0 +1,75 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<style>
+body {font-family: "Arial Narrow"; font-size: 10pt;}
+table {font-family: "Arial Narrow"; font-size: 10pt; border:1px solid #AA0055; background: #DDDDAA;text-align: center;}
+table td{ margin:O; padding: 0 2px; background: #FFFFFF;}
+.rezult th { font-family: "Arial Narrow";font-style: italic; font-size: 10pt;color: #AA0055;padding: 2px 3px; background: #EEEEBB;}
+H1  {font-size: 14pt;font-weight: bold;color: #AA0055;text-align: left;}
+.yl, tr.yl td {background: #FFFFAA;}
+</style><title>Ранняя весна. Сплиты команды "Лесовик"</title></head><body><h1>График движения команды 100. КАРАГАНОВ ВАДИМ</h1><table class="rezult"><tr><th>Путь</th><th>Время</th><th>Сплит</th><th>Очки</th><th>Расстояние (км)</th><th>Скорость (мин/км)</th></tr><tr><td>S - 44</td><td>08:16</td><td>08:16</td><td>4 / 4</td><td>0.37 / 0.37</td><td><strong>22:18</strong></td></tr><tr class="yl"><td>44 - 37</td><td>18:07</td><td>09:51</td><td>3 / 7</td><td>0.50 / 0.87</td><td><strong>19:46</strong></td></tr><tr><td>37 - 85</td><td>25:55</td><td>07:48</td><td>8 / 15</td><td>0.69 / 1.55</td><td><strong>11:23</strong></td></tr><tr class="yl"><td>85 - 79</td><td>34:51</td><td>08:56</td><td>7 / 22</td><td>0.65 / 2.21</td><td><strong>13:41</strong></td></tr><tr><td>79 - 58</td><td>50:42</td><td>15:51</td><td>5 / 27</td><td>0.75 / 2.95</td><td><strong>21:15</strong></td></tr><tr class="yl"><td>58 - 39</td><td>1:01:37</td><td>10:55</td><td>3 / 30</td><td>0.49 / 3.45</td><td><strong>22:11</strong></td></tr><tr><td>39 - 84</td><td>1:10:22</td><td>08:45</td><td>8 / 38</td><td>0.54 / 3.98</td><td><strong>16:13</strong></td></tr><tr class="yl"><td>84 - 69</td><td>1:28:21</td><td>17:59</td><td>6 / 44</td><td>0.85 / 4.84</td><td><strong>21:05</strong></td></tr><tr><td>69 - 38</td><td>1:37:30</td><td>09:09</td><td>3 / 47</td><td>0.57 / 5.41</td><td><strong>16:07</strong></td></tr><tr class="yl"><td>38 - 86</td><td>1:46:08</td><td>08:38</td><td>8 / 55</td><td>0.48 / 5.88</td><td><strong>18:01</strong></td></tr><tr><td>86 - 59</td><td>2:03:45</td><td>17:37</td><td>5 / 60</td><td>0.59 / 6.48</td><td><strong>29:38</strong></td></tr><tr class="yl"><td>59 - 68</td><td>2:27:23</td><td>23:38</td><td>6 / 66</td><td>0.66 / 7.14</td><td><strong>35:40</strong></td></tr><tr><td>68 - 40</td><td>2:50:54</td><td>23:31</td><td>4 / 70</td><td>1.66 / 8.80</td><td><strong>14:12</strong></td></tr><tr class="yl"><td>40 - F</td><td>3:01:01</td><td>10:07</td><td>0 / 70</td><td>0.67 / 9.47</td><td><strong>15:02</strong></td></tr><tr class="yl"><th>&nbsp;</th><th>3:01:01</th><th>&nbsp;</th><th>70</th><th>9.47 км</th><th><strong>19:07 мин/км</strong></th></tr></table><br><div style="position: relative"><div style="position: relative">медленно</div>
+<div style="position: absolute; top: 0; left: 500;">средне</div>
+<div style="position: absolute; top: 0; left: 940;">быстро</div>
+</div><canvas id="e" width="1000" height="610"></canvas>
+<script>
+var kp_list = [[-31.937172774869,5.0610820244328, "rgb(199,0,112)"],[-48.69109947644,45.200698080279, "rgb(230,0,50)"],[-107.15532286213,32.722513089005, "rgb(255,256,0)"],[-164.13612565445,32.198952879581, "rgb(255,214,0)"],[-218.32460732984,-3.8394415357766, "rgb(209,0,92)"],[-228.184991274,37.958115183246, "rgb(200,0,110)"],[-212.73996509599,82.460732984293, "rgb(255,156,0)"],[-200.87260034904,155.93368237347, "rgb(211,0,88)"],[-181.41361256545,201.48342059337, "rgb(255,160,0)"],[-139.61605584642,201.22164048866, "rgb(255,96,0)"],[-143.10645724258,149.47643979058, "rgb(153,0,204)"],[-145.37521815009,91.710296684119, "rgb(127,0,256)"],[-4.7120418848168,58.551483420593, "rgb(255,204,0)"],[0,0, "rgb(255,186,0)"],];
+var canvas = document.getElementById("e");
+var context = canvas.getContext("2d");
+var map = new Image();
+var c = [471.20418848168, 261.78010471204];
+map.src = "map.jpg";
+map.onload = function() {
+	context.drawImage(map, 0, 0);
+	for (i=0, l=kp_list.length; i<l; i++) {
+		context.beginPath();
+		context.arc(c[0] + kp_list[i][0], c[1] + kp_list[i][1], 4, 0, Math.PI * 2, false);
+		context.closePath();
+		context.strokeStyle = "#f00";
+		context.stroke();
+		context.fillStyle = "#f00";
+		context.fill();
+	}
+	context.lineWidth = 3;
+	var old_x = 0, old_y = 0;
+	for (i=0, l=kp_list.length; i<l; i++) {
+		context.beginPath();
+		context.moveTo(c[0] + old_x, c[1] + old_y);
+		context.lineTo(c[0] + kp_list[i][0], c[1] + kp_list[i][1]);
+		context.strokeStyle = kp_list[i][2];
+		context.stroke();
+		old_x = kp_list[i][0]; old_y = kp_list[i][1];
+	}
+	context.beginPath();
+	context.strokeStyle = "#f00";
+	var km_length = 87.260034904014;
+	context.moveTo(30,10);
+	context.lineTo(30,50);
+	context.moveTo(30,30);
+	context.lineTo(30+km_length,30);
+	context.moveTo(30+km_length,10);
+	context.lineTo(30+km_length,50);
+	context.stroke();
+	context.fillStyle = '#f00';
+	context.font = 'bold 30px sans-serif';
+	context.fillText('1 km', km_length/2, 40);
+	var lingrad = context.createLinearGradient(0,5,canvas.width,5);
+    lingrad.addColorStop(0, 'rgb(128,0,255)');
+    lingrad.addColorStop(0.5, 'rgb(255,0,0)');
+    lingrad.addColorStop(1, 'rgb(255,255,0)');
+	context.fillStyle = lingrad;
+    context.fillRect(0,0,canvas.width,10);
+};
+</script><script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script>
+<noscript><div><img src="//mc.yandex.ru/watch/1522145" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter --></noindex>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-6677572-12']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<!--LiveInternet counter--><script type="text/javascript">new Image().src = "//counter.yadro.ru/hit?r" + escape(top.document.referrer) + ((typeof(screen)=="undefined")?"" : ";s"+screen.width+"*"+screen.height+"*" + (screen.colorDepth?screen.colorDepth:screen.pixelDepth)) + ";u"+escape(document.URL) + ";h"+escape(document.title.substring(0,80)) + ";" +Math.random();</script><!--/LiveInternet-->
+</body></html>

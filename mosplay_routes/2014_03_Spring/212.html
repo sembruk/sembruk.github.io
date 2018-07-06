@@ -1,0 +1,75 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<style>
+body {font-family: "Arial Narrow"; font-size: 10pt;}
+table {font-family: "Arial Narrow"; font-size: 10pt; border:1px solid #AA0055; background: #DDDDAA;text-align: center;}
+table td{ margin:O; padding: 0 2px; background: #FFFFFF;}
+.rezult th { font-family: "Arial Narrow";font-style: italic; font-size: 10pt;color: #AA0055;padding: 2px 3px; background: #EEEEBB;}
+H1  {font-size: 14pt;font-weight: bold;color: #AA0055;text-align: left;}
+.yl, tr.yl td {background: #FFFFAA;}
+</style><title>Ранняя весна 2014. Сплиты команды "Крылатый батальон-1"</title></head><body><h1>График движения команды 212. ДМИТРИЕВА ТАТЬЯНА</h1><table class="rezult"><tr><th>Путь</th><th>Время</th><th>Сплит</th><th>Очки</th><th>Расстояние (км)</th><th>Скорость (мин/км)</th></tr><tr><td>S - 42</td><td>02:08</td><td>02:08</td><td>4 / 4</td><td>0.27 / 0.27</td><td><strong>7:57</strong></td></tr><tr class="yl"><td>42 - 44</td><td>06:11</td><td>04:03</td><td>4 / 8</td><td>0.48 / 0.75</td><td><strong>8:26</strong></td></tr><tr><td>44 - 43</td><td>08:42</td><td>02:31</td><td>4 / 12</td><td>0.26 / 1.01</td><td><strong>9:32</strong></td></tr><tr class="yl"><td>43 - 31</td><td>12:27</td><td>03:45</td><td>3 / 15</td><td>0.44 / 1.45</td><td><strong>8:35</strong></td></tr><tr><td>31 - 52</td><td>21:57</td><td>09:30</td><td>5 / 20</td><td>0.75 / 2.20</td><td><strong>12:36</strong></td></tr><tr class="yl"><td>52 - 82</td><td>34:59</td><td>13:02</td><td>8 / 28</td><td>0.65 / 2.85</td><td><strong>20:11</strong></td></tr><tr><td>82 - 36</td><td>44:35</td><td>09:36</td><td>3 / 31</td><td>0.84 / 3.69</td><td><strong>11:24</strong></td></tr><tr class="yl"><td>36 - 69</td><td>48:53</td><td>04:18</td><td>6 / 37</td><td>0.77 / 4.46</td><td><strong>5:35</strong></td></tr><tr><td>69 - 39</td><td>55:54</td><td>07:01</td><td>3 / 40</td><td>1.14 / 5.60</td><td><strong>6:09</strong></td></tr><tr class="yl"><td>39 - 70</td><td>1:01:48</td><td>05:54</td><td>7 / 47</td><td>0.59 / 6.19</td><td><strong>9:59</strong></td></tr><tr class="yl"><td>70 - 75 - 77</td><td>1:53:01</td><td>51:13</td><td>7 / 61</td><td>1.87 / 8.06</td><td><strong>42:14</strong></td></tr><tr><td>77 - 87</td><td>2:02:08</td><td>09:07</td><td>8 / 69</td><td>0.70 / 8.77</td><td><strong>13:00</strong></td></tr><tr class="yl"><td>87 - 65</td><td>2:20:50</td><td>18:42</td><td>6 / 75</td><td>1.31 / 10.08</td><td><strong>14:17</strong></td></tr><tr><td>65 - 35</td><td>2:43:16</td><td>22:26</td><td>3 / 78</td><td>1.27 / 11.34</td><td><strong>17:41</strong></td></tr><tr class="yl"><td>35 - F</td><td>3:11:52</td><td>28:36</td><td>0 / 78</td><td>3.61 / 14.95</td><td><strong>7:56</strong></td></tr><tr class="yl"><th>&nbsp;</th><th>3:11:52</th><th>&nbsp;</th><th>78</th><th>14.95 км</th><th><strong>12:50 мин/км</strong></th></tr></table><br><div style="position: relative"><div style="position: relative">медленно</div>
+<div style="position: absolute; top: 0; left: 600;">средне</div>
+<div style="position: absolute; top: 0; left: 1140;">быстро</div>
+</div><canvas id="e" width="1200" height="1115"></canvas>
+<script>
+var kp_list = [[-5.3638660557468,-34.198488094546, "rgb(255,210,0)"],[-29.385447823108,-91.262048978184, "rgb(255,200,0)"],[-60.835567413669,-78.270504472385, "rgb(255,172,0)"],[-112.9518241739,-56.918851165684, "rgb(255,196,0)"],[-127.90643599542,-152.89127186511, "rgb(255,46,0)"],[-167.01294646169,-226.31371886219, "rgb(191,0,128)"],[-246.49335804584,-300.20710408806, "rgb(255,114,0)"],[-211.20149274705,-392.81381036527, "rgb(255,256,0)"],[-228.44759643725,-538.87536513393, "rgb(255,246,0)"],[-153.05320667531,-549.76105877792, "rgb(255,160,0)"],[-236.45513909947,-687.54427247382, "rgb(127,0,256)"],[-283.44802891771,-622.67696312693, "rgb(127,0,256)"],[-371.95759328535,-604.46550876568, "rgb(245,0,20)"],[-437.23285093204,-448.80360036099, "rgb(227,0,56)"],[-337.94542620698,-318.97873685094, "rgb(203,0,104)"],[0.10446113418961,-0.14933436552816, "rgb(255,210,0)"],];
+var canvas = document.getElementById("e");
+var context = canvas.getContext("2d");
+var map = new Image();
+var c = [646.2, 748.8];
+map.src = "map.jpg";
+map.onload = function() {
+	context.drawImage(map, 0, 0);
+	for (i=0, l=kp_list.length; i<l; i++) {
+		context.beginPath();
+		context.arc(c[0] + kp_list[i][0], c[1] + kp_list[i][1], 4, 0, Math.PI * 2, false);
+		context.closePath();
+		context.strokeStyle = "#f00";
+		context.stroke();
+		context.fillStyle = "#f00";
+		context.fill();
+	}
+	context.lineWidth = 3;
+	var old_x = 0, old_y = 0;
+	for (i=0, l=kp_list.length; i<l; i++) {
+		context.beginPath();
+		context.moveTo(c[0] + old_x, c[1] + old_y);
+		context.lineTo(c[0] + kp_list[i][0], c[1] + kp_list[i][1]);
+		context.strokeStyle = kp_list[i][2];
+		context.stroke();
+		old_x = kp_list[i][0]; old_y = kp_list[i][1];
+	}
+	context.beginPath();
+	context.strokeStyle = "#f00";
+	var km_length = 128.86597938144;
+	context.moveTo(30,10);
+	context.lineTo(30,50);
+	context.moveTo(30,30);
+	context.lineTo(30+km_length,30);
+	context.moveTo(30+km_length,10);
+	context.lineTo(30+km_length,50);
+	context.stroke();
+	context.fillStyle = '#f00';
+	context.font = 'bold 30px sans-serif';
+	context.fillText('1 km', km_length/2, 40);
+	var lingrad = context.createLinearGradient(0,5,canvas.width,5);
+    lingrad.addColorStop(0, 'rgb(128,0,255)');
+    lingrad.addColorStop(0.5, 'rgb(255,0,0)');
+    lingrad.addColorStop(1, 'rgb(255,255,0)');
+	context.fillStyle = lingrad;
+    context.fillRect(0,0,canvas.width,10);
+};
+</script><script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script>
+<noscript><div><img src="//mc.yandex.ru/watch/1522145" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter --></noindex>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-6677572-12']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<!--LiveInternet counter--><script type="text/javascript">new Image().src = "//counter.yadro.ru/hit?r" + escape(top.document.referrer) + ((typeof(screen)=="undefined")?"" : ";s"+screen.width+"*"+screen.height+"*" + (screen.colorDepth?screen.colorDepth:screen.pixelDepth)) + ";u"+escape(document.URL) + ";h"+escape(document.title.substring(0,80)) + ";" +Math.random();</script><!--/LiveInternet-->
+</body></html>

@@ -1,0 +1,75 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<style>
+body {font-family: "Arial Narrow"; font-size: 10pt;}
+table {font-family: "Arial Narrow"; font-size: 10pt; border:1px solid #AA0055; background: #DDDDAA;text-align: center;}
+table td{ margin:O; padding: 0 2px; background: #FFFFFF;}
+.rezult th { font-family: "Arial Narrow";font-style: italic; font-size: 10pt;color: #AA0055;padding: 2px 3px; background: #EEEEBB;}
+H1  {font-size: 14pt;font-weight: bold;color: #AA0055;text-align: left;}
+.yl, tr.yl td {background: #FFFFAA;}
+</style><title>Золото Сенежа. Сплиты команды "ЛИГА-ЖУЛЕБИНО"</title></head><body><h1>График движения команды 295. МАЙОРОВА ЮЛИЯ</h1><table class="rezult"><tr><th>Путь</th><th>Время</th><th>Сплит</th><th>Очки</th><th>Расстояние (км)</th><th>Скорость (мин/км)</th></tr><tr><td>S - 30</td><td>10:39</td><td>10:39</td><td>3 / 3</td><td>1.33 / 1.33</td><td><strong>7:59</strong></td></tr><tr class="yl"><td>30 - 41</td><td>32:24</td><td>21:45</td><td>4 / 7</td><td>1.59 / 2.92</td><td><strong>13:42</strong></td></tr><tr><td>41 - 75</td><td>42:36</td><td>10:12</td><td>7 / 14</td><td>0.87 / 3.79</td><td><strong>11:42</strong></td></tr><tr class="yl"><td>75 - 73</td><td>1:14:23</td><td>31:47</td><td>7 / 21</td><td>1.35 / 5.14</td><td><strong>23:32</strong></td></tr><tr><td>73 - 35</td><td>1:23:52</td><td>09:29</td><td>3 / 24</td><td>0.84 / 5.98</td><td><strong>11:20</strong></td></tr><tr class="yl"><td>35 - 72</td><td>1:33:26</td><td>09:34</td><td>7 / 31</td><td>1.02 / 7.00</td><td><strong>9:22</strong></td></tr><tr><td>72 - 61</td><td>1:50:52</td><td>17:26</td><td>6 / 37</td><td>1.24 / 8.24</td><td><strong>14:04</strong></td></tr><tr class="yl"><td>61 - 42</td><td>2:07:47</td><td>16:55</td><td>4 / 41</td><td>1.63 / 9.87</td><td><strong>10:24</strong></td></tr><tr><td>42 - 32</td><td>2:27:47</td><td>20:00</td><td>3 / 44</td><td>1.92 / 11.78</td><td><strong>10:26</strong></td></tr><tr class="yl"><td>32 - 37</td><td>2:56:07</td><td>28:20</td><td>3 / 47</td><td>1.35 / 13.14</td><td><strong>20:58</strong></td></tr><tr><td>37 - 53</td><td>3:06:00</td><td>09:53</td><td>5 / 52</td><td>1.16 / 14.29</td><td><strong>8:33</strong></td></tr><tr class="yl"><td>53 - 36</td><td>3:26:16</td><td>20:16</td><td>3 / 55</td><td>1.28 / 15.57</td><td><strong>15:53</strong></td></tr><tr><td>36 - 43</td><td>3:32:12</td><td>05:56</td><td>4 / 59</td><td>1.89 / 17.46</td><td><strong>3:08</strong></td></tr><tr class="yl"><td>43 - F</td><td>3:55:18</td><td>23:06</td><td>0 / 59</td><td>2.69 / 20.15</td><td><strong>8:36</strong></td></tr><tr class="yl"><th>&nbsp;</th><th>3:55:18</th><th>&nbsp;</th><th>59</th><th>20.15 км</th><th><strong>11:41 мин/км</strong></th></tr></table><br><div style="position: relative"><div style="position: relative">медленно</div>
+<div style="position: absolute; top: 0; left: 422.5;">средне</div>
+<div style="position: absolute; top: 0; left: 785;">быстро</div>
+</div><canvas id="e" width="845" height="1200"></canvas>
+<script>
+var kp_list = [[-111.3786407767,65.912621359223, "rgb(255,168,0)"],[-52.660194174757,208.44174757282, "rgb(202,0,106)"],[4.995145631068,270.3640776699, "rgb(249,0,12)"],[-125.2572815534,285.84466019417, "rgb(127,0,256)"],[-191.9854368932,239.40291262136, "rgb(255,52,0)"],[-271.5145631068,298.66019417476, "rgb(255,134,0)"],[-263.51941747573,178.54368932039, "rgb(198,0,114)"],[-111.3786407767,136.38349514563, "rgb(255,98,0)"],[-93.757281553398,-48.844660194175, "rgb(255,98,0)"],[-20.635922330097,-157.74757281553, "rgb(142,0,226)"],[-86.825242718447,-248.49029126214, "rgb(255,156,0)"],[17.271844660194,-315.7572815534, "rgb(179,0,152)"],[162.99029126214,-203.65048543689, "rgb(255,256,0)"],[0.097087378640777,-0.097087378640777, "rgb(255,154,0)"],];
+var canvas = document.getElementById("e");
+var context = canvas.getContext("2d");
+var map = new Image();
+var c = [453.20388349515, 814.66019417476];
+map.src = "map.jpg";
+map.onload = function() {
+	context.drawImage(map, 0, 0);
+	for (i=0, l=kp_list.length; i<l; i++) {
+		context.beginPath();
+		context.arc(c[0] + kp_list[i][0], c[1] + kp_list[i][1], 4, 0, Math.PI * 2, false);
+		context.closePath();
+		context.strokeStyle = "#f00";
+		context.stroke();
+		context.fillStyle = "#f00";
+		context.fill();
+	}
+	context.lineWidth = 3;
+	var old_x = 0, old_y = 0;
+	for (i=0, l=kp_list.length; i<l; i++) {
+		context.beginPath();
+		context.moveTo(c[0] + old_x, c[1] + old_y);
+		context.lineTo(c[0] + kp_list[i][0], c[1] + kp_list[i][1]);
+		context.strokeStyle = kp_list[i][2];
+		context.stroke();
+		old_x = kp_list[i][0]; old_y = kp_list[i][1];
+	}
+	context.beginPath();
+	context.strokeStyle = "#f00";
+	var km_length = 97.087378640777;
+	context.moveTo(30,10);
+	context.lineTo(30,50);
+	context.moveTo(30,30);
+	context.lineTo(30+km_length,30);
+	context.moveTo(30+km_length,10);
+	context.lineTo(30+km_length,50);
+	context.stroke();
+	context.fillStyle = '#f00';
+	context.font = 'bold 30px sans-serif';
+	context.fillText('1 km', km_length/2, 40);
+	var lingrad = context.createLinearGradient(0,5,canvas.width,5);
+    lingrad.addColorStop(0, 'rgb(128,0,255)');
+    lingrad.addColorStop(0.5, 'rgb(255,0,0)');
+    lingrad.addColorStop(1, 'rgb(255,255,0)');
+	context.fillStyle = lingrad;
+    context.fillRect(0,0,canvas.width,10);
+};
+</script><script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script>
+<noscript><div><img src="//mc.yandex.ru/watch/1522145" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter --></noindex>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-6677572-12']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<!--LiveInternet counter--><script type="text/javascript">new Image().src = "//counter.yadro.ru/hit?r" + escape(top.document.referrer) + ((typeof(screen)=="undefined")?"" : ";s"+screen.width+"*"+screen.height+"*" + (screen.colorDepth?screen.colorDepth:screen.pixelDepth)) + ";u"+escape(document.URL) + ";h"+escape(document.title.substring(0,80)) + ";" +Math.random();</script><!--/LiveInternet-->
+</body></html>
