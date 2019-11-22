@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+    <title>220 SpaceTri, Калуга | Финал Кубка.     Прокшино,  17.11.2019.</title>
+    <style>
+body {font-family: monospace; font-size:10pt;}
+table {font-size:10pt; text-align:center;}
+table.team {font-size:12pt; text-align:left;}
+table.result {border:1px AA0055; background:#ddd;}
+table td{ margin:O; padding:0 2px; background:#fff;}
+h1 {font-size:16pt; font-weight:bold; text-align:left;}
+h2 {font-size:14pt; font-weight:bold; text-align:left;}
+div {max-width: 800px;}
+div.blue_rectangle {background: blue; height: 10px; width: 0px;}
+div.green_rectangle {background: green; height: 10px; width: 0px;}
+    </style>
+</head>
+<body>
+    <h1>220 SpaceTri, Калуга</h1>
+    <h2>Евгений Хромушкин</h2>
+    <table class="team">
+        <tr><td>Место</td><td>4</td></tr>
+        <tr><td>Очки</td><td>190</td></tr>
+        <tr><td>Штраф</td><td>11</td></tr>
+        <tr><td>Время</td><td>4:10:32</td></tr>
+        <tr><td>Результат</td><td><b>179</b></td></tr>
+    </table>
+    <canvas id="map"></canvas>
+    <table class="result">
+        <tr>
+		    <th>№</th><th>КП</th><th>Время</th><th>Сплит</th><th>Очки</th><th>Расстояние, км</th><th>Темп, мин/км</th><th>Мин/очко</th>
+        </tr>
+        
+        <tr>
+            <td>0</td><td>S</td><td></td><td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        
+        <tr>
+            <td>1</td><td>32</td><td>0:04:12</td><td>0:04:12</td><td>3 / 3</td><td>0.67 / 0.67</td><td>6.28</td><td>1.40</td>
+        </tr>
+        
+        <tr>
+            <td>2</td><td>30</td><td>0:09:02</td><td>0:04:50</td><td>3 / 6</td><td>0.71 / 1.38</td><td>6.77</td><td>1.61</td>
+        </tr>
+        
+        <tr>
+            <td>3</td><td>42</td><td>0:12:00</td><td>0:02:58</td><td>4 / 10</td><td>0.60 / 1.98</td><td>4.98</td><td>0.74</td>
+        </tr>
+        
+        <tr>
+            <td>4</td><td>63</td><td>0:17:42</td><td>0:05:42</td><td>6 / 16</td><td>0.86 / 2.84</td><td>6.59</td><td>0.95</td>
+        </tr>
+        
+        <tr>
+            <td>5</td><td>52</td><td>0:21:23</td><td>0:03:41</td><td>5 / 21</td><td>0.64 / 3.48</td><td>5.75</td><td>0.74</td>
+        </tr>
+        
+        <tr>
+            <td>6</td><td>40</td><td>0:27:42</td><td>0:06:19</td><td>4 / 25</td><td>1.00 / 4.48</td><td>6.32</td><td>1.58</td>
+        </tr>
+        
+        <tr>
+            <td>7</td><td>50</td><td>0:34:40</td><td>0:06:58</td><td>5 / 30</td><td>0.91 / 5.39</td><td>7.65</td><td>1.39</td>
+        </tr>
+        
+        <tr>
+            <td>8</td><td>38</td><td>0:39:56</td><td>0:05:16</td><td>3 / 33</td><td>0.82 / 6.22</td><td>6.40</td><td>1.76</td>
+        </tr>
+        
+        <tr>
+            <td>9</td><td>70</td><td>0:43:25</td><td>0:03:29</td><td>7 / 40</td><td>0.49 / 6.71</td><td>7.10</td><td>0.50</td>
+        </tr>
+        
+        <tr>
+            <td>10</td><td>48</td><td>0:47:58</td><td>0:04:33</td><td>4 / 44</td><td>0.77 / 7.47</td><td>5.94</td><td>1.14</td>
+        </tr>
+        
+        <tr>
+            <td>11</td><td>62</td><td>0:51:17</td><td>0:03:19</td><td>6 / 50</td><td>0.49 / 7.96</td><td>6.82</td><td>0.55</td>
+        </tr>
+        
+        <tr>
+            <td>12</td><td>61</td><td>1:00:45</td><td>0:09:28</td><td>6 / 56</td><td>1.14 / 9.10</td><td>8.32</td><td>1.58</td>
+        </tr>
+        
+        <tr>
+            <td>13</td><td>46</td><td>1:08:21</td><td>0:07:36</td><td>4 / 60</td><td>1.06 / 10.16</td><td>7.16</td><td>1.90</td>
+        </tr>
+        
+        <tr>
+            <td>14</td><td>43</td><td>1:13:15</td><td>0:04:54</td><td>4 / 64</td><td>0.79 / 10.95</td><td>6.20</td><td>1.23</td>
+        </tr>
+        
+        <tr>
+            <td>15</td><td>72</td><td>1:29:21</td><td>0:16:06</td><td>7 / 71</td><td>0.56 / 11.52</td><td>28.55</td><td>2.30</td>
+        </tr>
+        
+        <tr>
+            <td>16</td><td>56</td><td>1:29:21</td><td></td><td>5 / 76</td><td>0.82 / 12.34</td><td></td><td></td>
+        </tr>
+        
+        <tr>
+            <td>17</td><td>71</td><td>1:34:54</td><td>0:05:33</td><td>7 / 83</td><td>0.86 / 13.20</td><td>6.43</td><td>0.79</td>
+        </tr>
+        
+        <tr>
+            <td>18</td><td>69</td><td>1:40:49</td><td>0:05:55</td><td>6 / 89</td><td>0.93 / 14.13</td><td>6.35</td><td>0.99</td>
+        </tr>
+        
+        <tr>
+            <td>19</td><td>59</td><td>1:48:28</td><td>0:07:39</td><td>5 / 94</td><td>1.03 / 15.17</td><td>7.40</td><td>1.53</td>
+        </tr>
+        
+        <tr>
+            <td>20</td><td>58</td><td>1:53:01</td><td>0:04:33</td><td>5 / 99</td><td>0.74 / 15.91</td><td>6.13</td><td>0.91</td>
+        </tr>
+        
+        <tr>
+            <td>21</td><td>57</td><td>2:07:21</td><td>0:14:20</td><td>5 / 104</td><td>1.56 / 17.47</td><td>9.17</td><td>2.87</td>
+        </tr>
+        
+        <tr>
+            <td>22</td><td>60</td><td>2:13:50</td><td>0:06:29</td><td>6 / 110</td><td>0.70 / 18.18</td><td>9.21</td><td>1.08</td>
+        </tr>
+        
+        <tr>
+            <td>23</td><td>73</td><td>2:23:36</td><td>0:09:46</td><td>7 / 117</td><td>1.27 / 19.44</td><td>7.70</td><td>1.40</td>
+        </tr>
+        
+        <tr>
+            <td>24</td><td>67</td><td>2:35:21</td><td>0:11:45</td><td>6 / 123</td><td>0.95 / 20.39</td><td>12.40</td><td>1.96</td>
+        </tr>
+        
+        <tr>
+            <td>25</td><td>49</td><td>2:43:20</td><td>0:07:59</td><td>4 / 127</td><td>1.00 / 21.39</td><td>7.99</td><td>2.00</td>
+        </tr>
+        
+        <tr>
+            <td>26</td><td>34</td><td>2:49:26</td><td>0:06:06</td><td>3 / 130</td><td>0.95 / 22.34</td><td>6.44</td><td>2.03</td>
+        </tr>
+        
+        <tr>
+            <td>27</td><td>51</td><td>2:57:02</td><td>0:07:36</td><td>5 / 135</td><td>1.03 / 23.37</td><td>7.35</td><td>1.52</td>
+        </tr>
+        
+        <tr>
+            <td>28</td><td>65</td><td>3:03:20</td><td>0:06:18</td><td>6 / 141</td><td>0.60 / 23.97</td><td>10.48</td><td>1.05</td>
+        </tr>
+        
+        <tr>
+            <td>29</td><td>45</td><td>3:08:31</td><td>0:05:11</td><td>4 / 145</td><td>0.63 / 24.60</td><td>8.26</td><td>1.30</td>
+        </tr>
+        
+        <tr>
+            <td>30</td><td>66</td><td>3:19:55</td><td>0:11:24</td><td>6 / 151</td><td>0.85 / 25.45</td><td>13.41</td><td>1.90</td>
+        </tr>
+        
+        <tr>
+            <td>31</td><td>68</td><td>3:26:23</td><td>0:06:28</td><td>6 / 157</td><td>0.78 / 26.24</td><td>8.25</td><td>1.08</td>
+        </tr>
+        
+        <tr>
+            <td>32</td><td>33</td><td>3:34:22</td><td>0:07:59</td><td>3 / 160</td><td>0.73 / 26.97</td><td>10.90</td><td>2.66</td>
+        </tr>
+        
+        <tr>
+            <td>33</td><td>55</td><td>3:38:48</td><td>0:04:26</td><td>5 / 165</td><td>0.71 / 27.68</td><td>6.23</td><td>0.89</td>
+        </tr>
+        
+        <tr>
+            <td>34</td><td>74</td><td>3:43:44</td><td>0:04:56</td><td>7 / 172</td><td>0.74 / 28.42</td><td>6.70</td><td>0.70</td>
+        </tr>
+        
+        <tr>
+            <td>35</td><td>54</td><td>3:50:37</td><td>0:06:53</td><td>5 / 177</td><td>1.08 / 29.50</td><td>6.36</td><td>1.38</td>
+        </tr>
+        
+        <tr>
+            <td>36</td><td>37</td><td>3:55:29</td><td>0:04:52</td><td>3 / 180</td><td>0.72 / 30.22</td><td>6.79</td><td>1.62</td>
+        </tr>
+        
+        <tr>
+            <td>37</td><td>36</td><td>4:05:20</td><td>0:09:51</td><td>3 / 183</td><td>1.68 / 31.90</td><td>5.86</td><td>3.28</td>
+        </tr>
+        
+        <tr>
+            <td>38</td><td>31</td><td>4:14:24</td><td>0:09:04</td><td>3 / 186</td><td>0.87 / 32.76</td><td>10.46</td><td>3.02</td>
+        </tr>
+        
+        <tr>
+            <td>39</td><td>47</td><td>4:51:33</td><td>0:37:09</td><td>4 / 190</td><td>3.60 / 36.36</td><td>10.32</td><td>9.29</td>
+        </tr>
+        
+        <tr>
+            <td>40</td><td>F</td><td>4:10:32</td><td>0:05:12</td><td></td><td>3.26 / 39.62</td><td>1.59</td><td></td>
+        </tr>
+        
+        <tr>
+		    <th></th><th></th><th></th><th></th><th>190</th><th>39.62</th><th>6.32</th><th>1.32</th>
+        </tr>
+    </table>
+    <script>
+       var cp_list = [
+          [815,668],[850,795],[906,666],[972,569],[1142,576],[1084,688],[1068,884],[1029,1059],[920,1179],[977,1257],[841,1322],[779,1249],[704,1460],[510,1538],[440,1399],[550,1384],[549,1222],[381,1196],[371,1013],[262,1185],[320,1319],[214,1608],[131,1497],[114,1248],[69,1067],[157,891],[253,731],[456,716],[421,603],[402,481],[265,385],[118,432],[125,288],[48,171],[152,70],[337,176],[476,200],[599,507],[748,590],[677,1295],[815,668],
+       ]
+       var canvas = document.getElementById("map");
+       var context = canvas.getContext("2d");
+       var map = new Image();
+       map.src = "map.gif";
+       map.onload = function() {
+          canvas.width = this.naturalWidth;
+          canvas.height = this.naturalHeight;
+          context.scale(1, 1);
+          context.drawImage(map, 0, 0);
+          context.strokeStyle = "rgba(255,0,0,0.8)";
+          context.fillStyle = "rgba(255,0,0,0.8)";
+          for (i=0; i<cp_list.length; i++) {
+             context.beginPath();
+             context.arc(cp_list[i][0], cp_list[i][1], 3, 0, Math.PI * 2, false);
+             context.closePath();
+             context.stroke();
+             context.fill();
+          }
+          context.lineWidth = 4;
+          var old_x = cp_list[0][0], old_y = cp_list[0][1];
+          for (i=1; i<cp_list.length; i++) {
+             context.beginPath();
+             context.moveTo(old_x, old_y);
+             context.lineTo(cp_list[i][0], cp_list[i][1]);
+             context.stroke();
+             old_x = cp_list[i][0];
+             old_y = cp_list[i][1];
+          }
+          /*
+          context.beginPath();
+          context.moveTo(s[0] + arrow[0][0], s[1] + arrow[0][1]);
+          for (i=1; i<arrow.length; i++) {
+             context.lineTo(s[0] + arrow[i][0], s[1] + arrow[i][1]);
+          }
+          context.stroke();
+          context.fill();
+          */
+       };
+    </script>
+</body>
+</html>

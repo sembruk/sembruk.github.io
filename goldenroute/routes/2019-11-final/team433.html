@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+    <title>433 ВНЕСЕЗОНА, Лыткарино | Финал Кубка.     Прокшино,  17.11.2019.</title>
+    <style>
+body {font-family: monospace; font-size:10pt;}
+table {font-size:10pt; text-align:center;}
+table.team {font-size:12pt; text-align:left;}
+table.result {border:1px AA0055; background:#ddd;}
+table td{ margin:O; padding:0 2px; background:#fff;}
+h1 {font-size:16pt; font-weight:bold; text-align:left;}
+h2 {font-size:14pt; font-weight:bold; text-align:left;}
+div {max-width: 800px;}
+div.blue_rectangle {background: blue; height: 10px; width: 0px;}
+div.green_rectangle {background: green; height: 10px; width: 0px;}
+    </style>
+</head>
+<body>
+    <h1>433 ВНЕСЕЗОНА, Лыткарино</h1>
+    <h2>Елена Беликова, Жамиля Каменева, Марина Игнатьева, Евгения Обухова</h2>
+    <table class="team">
+        <tr><td>Место</td><td>32</td></tr>
+        <tr><td>Очки</td><td>89</td></tr>
+        <tr><td>Штраф</td><td>5</td></tr>
+        <tr><td>Время</td><td>4:04:13</td></tr>
+        <tr><td>Результат</td><td><b>84</b></td></tr>
+    </table>
+    <canvas id="map"></canvas>
+    <table class="result">
+        <tr>
+		    <th>№</th><th>КП</th><th>Время</th><th>Сплит</th><th>Очки</th><th>Расстояние, км</th><th>Темп, мин/км</th><th>Мин/очко</th>
+        </tr>
+        
+        <tr>
+            <td>0</td><td>S</td><td></td><td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        
+        <tr>
+            <td>1</td><td>32</td><td>0:07:47</td><td>0:07:47</td><td>3 / 3</td><td>0.67 / 0.67</td><td>11.63</td><td>2.59</td>
+        </tr>
+        
+        <tr>
+            <td>2</td><td>35</td><td>0:19:17</td><td>0:11:30</td><td>3 / 6</td><td>1.18 / 1.85</td><td>9.74</td><td>3.83</td>
+        </tr>
+        
+        <tr>
+            <td>3</td><td>39</td><td>0:30:42</td><td>0:11:25</td><td>3 / 9</td><td>1.12 / 2.97</td><td>10.17</td><td>3.81</td>
+        </tr>
+        
+        <tr>
+            <td>4</td><td>69</td><td>0:42:12</td><td>0:11:30</td><td>6 / 15</td><td>0.77 / 3.74</td><td>15.01</td><td>1.92</td>
+        </tr>
+        
+        <tr>
+            <td>5</td><td>59</td><td>1:02:26</td><td>0:20:14</td><td>5 / 20</td><td>1.03 / 4.77</td><td>19.56</td><td>4.05</td>
+        </tr>
+        
+        <tr>
+            <td>6</td><td>58</td><td>1:15:20</td><td>0:12:54</td><td>5 / 25</td><td>0.74 / 5.52</td><td>17.39</td><td>2.58</td>
+        </tr>
+        
+        <tr>
+            <td>7</td><td>71</td><td>1:29:27</td><td>0:14:07</td><td>7 / 32</td><td>0.70 / 6.21</td><td>20.24</td><td>2.02</td>
+        </tr>
+        
+        <tr>
+            <td>8</td><td>56</td><td>1:38:23</td><td>0:08:56</td><td>5 / 37</td><td>0.86 / 7.08</td><td>10.34</td><td>1.79</td>
+        </tr>
+        
+        <tr>
+            <td>9</td><td>72</td><td>2:01:48</td><td>0:23:25</td><td>7 / 44</td><td>0.82 / 7.90</td><td>28.45</td><td>3.35</td>
+        </tr>
+        
+        <tr>
+            <td>10</td><td>62</td><td>2:11:51</td><td>0:10:03</td><td>6 / 50</td><td>1.35 / 9.25</td><td>7.44</td><td>1.68</td>
+        </tr>
+        
+        <tr>
+            <td>11</td><td>48</td><td>2:20:39</td><td>0:08:48</td><td>4 / 54</td><td>0.49 / 9.74</td><td>18.09</td><td>2.20</td>
+        </tr>
+        
+        <tr>
+            <td>12</td><td>70</td><td>2:31:34</td><td>0:10:55</td><td>7 / 61</td><td>0.77 / 10.50</td><td>14.26</td><td>1.56</td>
+        </tr>
+        
+        <tr>
+            <td>13</td><td>38</td><td>2:44:20</td><td>0:12:46</td><td>3 / 64</td><td>0.49 / 10.99</td><td>26.01</td><td>4.26</td>
+        </tr>
+        
+        <tr>
+            <td>14</td><td>50</td><td>3:00:42</td><td>0:16:22</td><td>5 / 69</td><td>0.82 / 11.82</td><td>19.87</td><td>3.27</td>
+        </tr>
+        
+        <tr>
+            <td>15</td><td>40</td><td>3:15:31</td><td>0:14:49</td><td>4 / 73</td><td>0.91 / 12.73</td><td>16.27</td><td>3.70</td>
+        </tr>
+        
+        <tr>
+            <td>16</td><td>52</td><td>3:32:31</td><td>0:17:00</td><td>5 / 78</td><td>1.00 / 13.73</td><td>17.02</td><td>3.40</td>
+        </tr>
+        
+        <tr>
+            <td>17</td><td>42</td><td>3:52:18</td><td>0:19:47</td><td>4 / 82</td><td>0.83 / 14.56</td><td>23.83</td><td>4.95</td>
+        </tr>
+        
+        <tr>
+            <td>18</td><td>30</td><td>3:56:33</td><td>0:04:15</td><td>3 / 85</td><td>0.60 / 15.15</td><td>7.13</td><td>1.42</td>
+        </tr>
+        
+        <tr>
+            <td>19</td><td>47</td><td>4:17:36</td><td>0:21:03</td><td>4 / 89</td><td>3.40 / 18.55</td><td>6.19</td><td>5.26</td>
+        </tr>
+        
+        <tr>
+            <td>20</td><td>F</td><td>4:04:13</td><td>0:07:40</td><td></td><td>3.26 / 21.81</td><td>2.35</td><td></td>
+        </tr>
+        
+        <tr>
+		    <th></th><th></th><th></th><th></th><th>89</th><th>21.81</th><th>11.20</th><th>2.74</th>
+        </tr>
+    </table>
+    <script>
+       var cp_list = [
+          [815,668],[850,795],[719,987],[503,940],[371,1013],[262,1185],[320,1319],[381,1196],[549,1222],[550,1384],[779,1249],[841,1322],[977,1257],[920,1179],[1029,1059],[1068,884],[1084,688],[972,569],[906,666],[677,1295],[815,668],
+       ]
+       var canvas = document.getElementById("map");
+       var context = canvas.getContext("2d");
+       var map = new Image();
+       map.src = "map.gif";
+       map.onload = function() {
+          canvas.width = this.naturalWidth;
+          canvas.height = this.naturalHeight;
+          context.scale(1, 1);
+          context.drawImage(map, 0, 0);
+          context.strokeStyle = "rgba(255,0,0,0.8)";
+          context.fillStyle = "rgba(255,0,0,0.8)";
+          for (i=0; i<cp_list.length; i++) {
+             context.beginPath();
+             context.arc(cp_list[i][0], cp_list[i][1], 3, 0, Math.PI * 2, false);
+             context.closePath();
+             context.stroke();
+             context.fill();
+          }
+          context.lineWidth = 4;
+          var old_x = cp_list[0][0], old_y = cp_list[0][1];
+          for (i=1; i<cp_list.length; i++) {
+             context.beginPath();
+             context.moveTo(old_x, old_y);
+             context.lineTo(cp_list[i][0], cp_list[i][1]);
+             context.stroke();
+             old_x = cp_list[i][0];
+             old_y = cp_list[i][1];
+          }
+          /*
+          context.beginPath();
+          context.moveTo(s[0] + arrow[0][0], s[1] + arrow[0][1]);
+          for (i=1; i<arrow.length; i++) {
+             context.lineTo(s[0] + arrow[i][0], s[1] + arrow[i][1]);
+          }
+          context.stroke();
+          context.fill();
+          */
+       };
+    </script>
+</body>
+</html>

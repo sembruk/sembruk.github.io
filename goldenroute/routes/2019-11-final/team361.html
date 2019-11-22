@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+    <title>361 Безумные Лисы, Москва ЦАО | Финал Кубка.     Прокшино,  17.11.2019.</title>
+    <style>
+body {font-family: monospace; font-size:10pt;}
+table {font-size:10pt; text-align:center;}
+table.team {font-size:12pt; text-align:left;}
+table.result {border:1px AA0055; background:#ddd;}
+table td{ margin:O; padding:0 2px; background:#fff;}
+h1 {font-size:16pt; font-weight:bold; text-align:left;}
+h2 {font-size:14pt; font-weight:bold; text-align:left;}
+div {max-width: 800px;}
+div.blue_rectangle {background: blue; height: 10px; width: 0px;}
+div.green_rectangle {background: green; height: 10px; width: 0px;}
+    </style>
+</head>
+<body>
+    <h1>361 Безумные Лисы, Москва ЦАО</h1>
+    <h2>Галина Кулагина, Елена Батанова, Наталья Самохина, Прохор Утишев</h2>
+    <table class="team">
+        <tr><td>Место</td><td>34</td></tr>
+        <tr><td>Очки</td><td>85</td></tr>
+        <tr><td>Штраф</td><td>0</td></tr>
+        <tr><td>Время</td><td>3:59:33</td></tr>
+        <tr><td>Результат</td><td><b>85</b></td></tr>
+    </table>
+    <canvas id="map"></canvas>
+    <table class="result">
+        <tr>
+		    <th>№</th><th>КП</th><th>Время</th><th>Сплит</th><th>Очки</th><th>Расстояние, км</th><th>Темп, мин/км</th><th>Мин/очко</th>
+        </tr>
+        
+        <tr>
+            <td>0</td><td>S</td><td></td><td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        
+        <tr>
+            <td>1</td><td>32</td><td>0:07:58</td><td>0:07:58</td><td>3 / 3</td><td>0.67 / 0.67</td><td>11.90</td><td>2.66</td>
+        </tr>
+        
+        <tr>
+            <td>2</td><td>35</td><td>0:19:07</td><td>0:11:09</td><td>3 / 6</td><td>1.18 / 1.85</td><td>9.44</td><td>3.72</td>
+        </tr>
+        
+        <tr>
+            <td>3</td><td>39</td><td>0:31:38</td><td>0:12:31</td><td>3 / 9</td><td>1.12 / 2.97</td><td>11.15</td><td>4.17</td>
+        </tr>
+        
+        <tr>
+            <td>4</td><td>69</td><td>0:42:24</td><td>0:10:46</td><td>6 / 15</td><td>0.77 / 3.74</td><td>14.05</td><td>1.79</td>
+        </tr>
+        
+        <tr>
+            <td>5</td><td>59</td><td>1:03:09</td><td>0:20:45</td><td>5 / 20</td><td>1.03 / 4.77</td><td>20.06</td><td>4.15</td>
+        </tr>
+        
+        <tr>
+            <td>6</td><td>58</td><td>1:16:13</td><td>0:13:04</td><td>5 / 25</td><td>0.74 / 5.52</td><td>17.62</td><td>2.61</td>
+        </tr>
+        
+        <tr>
+            <td>7</td><td>71</td><td>1:30:08</td><td>0:13:55</td><td>7 / 32</td><td>0.70 / 6.21</td><td>19.95</td><td>1.99</td>
+        </tr>
+        
+        <tr>
+            <td>8</td><td>56</td><td>1:40:37</td><td>0:10:29</td><td>5 / 37</td><td>0.86 / 7.08</td><td>12.14</td><td>2.10</td>
+        </tr>
+        
+        <tr>
+            <td>9</td><td>72</td><td>2:02:12</td><td>0:21:35</td><td>7 / 44</td><td>0.82 / 7.90</td><td>26.23</td><td>3.08</td>
+        </tr>
+        
+        <tr>
+            <td>10</td><td>62</td><td>2:12:25</td><td>0:10:13</td><td>6 / 50</td><td>1.35 / 9.25</td><td>7.57</td><td>1.70</td>
+        </tr>
+        
+        <tr>
+            <td>11</td><td>48</td><td>2:20:56</td><td>0:08:31</td><td>4 / 54</td><td>0.49 / 9.74</td><td>17.50</td><td>2.13</td>
+        </tr>
+        
+        <tr>
+            <td>12</td><td>70</td><td>2:31:48</td><td>0:10:52</td><td>7 / 61</td><td>0.77 / 10.50</td><td>14.19</td><td>1.55</td>
+        </tr>
+        
+        <tr>
+            <td>13</td><td>38</td><td>2:44:53</td><td>0:13:05</td><td>3 / 64</td><td>0.49 / 10.99</td><td>26.66</td><td>4.36</td>
+        </tr>
+        
+        <tr>
+            <td>14</td><td>50</td><td>3:01:30</td><td>0:16:37</td><td>5 / 69</td><td>0.82 / 11.82</td><td>20.18</td><td>3.32</td>
+        </tr>
+        
+        <tr>
+            <td>15</td><td>40</td><td>3:16:43</td><td>0:15:13</td><td>4 / 73</td><td>0.91 / 12.73</td><td>16.71</td><td>3.80</td>
+        </tr>
+        
+        <tr>
+            <td>16</td><td>52</td><td>3:38:16</td><td>0:21:33</td><td>5 / 78</td><td>1.00 / 13.73</td><td>21.57</td><td>4.31</td>
+        </tr>
+        
+        <tr>
+            <td>17</td><td>30</td><td>3:53:30</td><td>0:15:14</td><td>3 / 81</td><td>0.91 / 14.64</td><td>16.72</td><td>5.08</td>
+        </tr>
+        
+        <tr>
+            <td>18</td><td>47</td><td>4:17:32</td><td>0:24:02</td><td>4 / 85</td><td>3.40 / 18.04</td><td>7.07</td><td>6.01</td>
+        </tr>
+        
+        <tr>
+            <td>19</td><td>F</td><td>3:59:33</td><td>0:06:03</td><td></td><td>3.26 / 21.30</td><td>1.86</td><td></td>
+        </tr>
+        
+        <tr>
+		    <th></th><th></th><th></th><th></th><th>85</th><th>21.30</th><th>11.25</th><th>2.82</th>
+        </tr>
+    </table>
+    <script>
+       var cp_list = [
+          [815,668],[850,795],[719,987],[503,940],[371,1013],[262,1185],[320,1319],[381,1196],[549,1222],[550,1384],[779,1249],[841,1322],[977,1257],[920,1179],[1029,1059],[1068,884],[1084,688],[906,666],[677,1295],[815,668],
+       ]
+       var canvas = document.getElementById("map");
+       var context = canvas.getContext("2d");
+       var map = new Image();
+       map.src = "map.gif";
+       map.onload = function() {
+          canvas.width = this.naturalWidth;
+          canvas.height = this.naturalHeight;
+          context.scale(1, 1);
+          context.drawImage(map, 0, 0);
+          context.strokeStyle = "rgba(255,0,0,0.8)";
+          context.fillStyle = "rgba(255,0,0,0.8)";
+          for (i=0; i<cp_list.length; i++) {
+             context.beginPath();
+             context.arc(cp_list[i][0], cp_list[i][1], 3, 0, Math.PI * 2, false);
+             context.closePath();
+             context.stroke();
+             context.fill();
+          }
+          context.lineWidth = 4;
+          var old_x = cp_list[0][0], old_y = cp_list[0][1];
+          for (i=1; i<cp_list.length; i++) {
+             context.beginPath();
+             context.moveTo(old_x, old_y);
+             context.lineTo(cp_list[i][0], cp_list[i][1]);
+             context.stroke();
+             old_x = cp_list[i][0];
+             old_y = cp_list[i][1];
+          }
+          /*
+          context.beginPath();
+          context.moveTo(s[0] + arrow[0][0], s[1] + arrow[0][1]);
+          for (i=1; i<arrow.length; i++) {
+             context.lineTo(s[0] + arrow[i][0], s[1] + arrow[i][1]);
+          }
+          context.stroke();
+          context.fill();
+          */
+       };
+    </script>
+</body>
+</html>

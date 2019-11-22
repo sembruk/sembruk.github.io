@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+    <title>162 Быстрые Колёса, Наро-Фоминский рR'?uЁ | Финал Кубка.     Прокшино,  17.11.2019.</title>
+    <style>
+body {font-family: monospace; font-size:10pt;}
+table {font-size:10pt; text-align:center;}
+table.team {font-size:12pt; text-align:left;}
+table.result {border:1px AA0055; background:#ddd;}
+table td{ margin:O; padding:0 2px; background:#fff;}
+h1 {font-size:16pt; font-weight:bold; text-align:left;}
+h2 {font-size:14pt; font-weight:bold; text-align:left;}
+div {max-width: 800px;}
+div.blue_rectangle {background: blue; height: 10px; width: 0px;}
+div.green_rectangle {background: green; height: 10px; width: 0px;}
+    </style>
+</head>
+<body>
+    <h1>162 Быстрые Колёса, Наро-Фоминский рR'?uЁ</h1>
+    <h2>Михаил Лабутин</h2>
+    <table class="team">
+        <tr><td>Место</td><td>12</td></tr>
+        <tr><td>Очки</td><td>136</td></tr>
+        <tr><td>Штраф</td><td>0</td></tr>
+        <tr><td>Время</td><td>3:50:01</td></tr>
+        <tr><td>Результат</td><td><b>136</b></td></tr>
+    </table>
+    <canvas id="map"></canvas>
+    <table class="result">
+        <tr>
+		    <th>№</th><th>КП</th><th>Время</th><th>Сплит</th><th>Очки</th><th>Расстояние, км</th><th>Темп, мин/км</th><th>Мин/очко</th>
+        </tr>
+        
+        <tr>
+            <td>0</td><td>S</td><td></td><td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        
+        <tr>
+            <td>1</td><td>32</td><td>0:02:30</td><td>0:02:30</td><td>3 / 3</td><td>0.67 / 0.67</td><td>3.74</td><td>0.83</td>
+        </tr>
+        
+        <tr>
+            <td>2</td><td>40</td><td>0:07:37</td><td>0:05:07</td><td>4 / 7</td><td>1.20 / 1.87</td><td>4.28</td><td>1.28</td>
+        </tr>
+        
+        <tr>
+            <td>3</td><td>50</td><td>0:17:49</td><td>0:10:12</td><td>5 / 12</td><td>0.91 / 2.78</td><td>11.20</td><td>2.04</td>
+        </tr>
+        
+        <tr>
+            <td>4</td><td>70</td><td>0:25:35</td><td>0:07:46</td><td>7 / 19</td><td>1.04 / 3.82</td><td>7.47</td><td>1.11</td>
+        </tr>
+        
+        <tr>
+            <td>5</td><td>38</td><td>0:29:04</td><td>0:03:29</td><td>3 / 22</td><td>0.49 / 4.31</td><td>7.10</td><td>1.16</td>
+        </tr>
+        
+        <tr>
+            <td>6</td><td>62</td><td>0:34:31</td><td>0:05:27</td><td>6 / 28</td><td>0.80 / 5.11</td><td>6.82</td><td>0.91</td>
+        </tr>
+        
+        <tr>
+            <td>7</td><td>61</td><td>0:56:58</td><td>0:22:27</td><td>6 / 34</td><td>1.14 / 6.24</td><td>19.73</td><td>3.74</td>
+        </tr>
+        
+        <tr>
+            <td>8</td><td>56</td><td>1:11:01</td><td>0:14:03</td><td>5 / 39</td><td>1.44 / 7.69</td><td>9.74</td><td>2.81</td>
+        </tr>
+        
+        <tr>
+            <td>9</td><td>72</td><td>1:27:57</td><td>0:16:56</td><td>7 / 46</td><td>0.82 / 8.51</td><td>20.58</td><td>2.42</td>
+        </tr>
+        
+        <tr>
+            <td>10</td><td>43</td><td>2:49:37</td><td>1:21:40</td><td>4 / 50</td><td>0.56 / 9.07</td><td>144.81</td><td>20.42</td>
+        </tr>
+        
+        <tr>
+            <td>11</td><td>46</td><td>2:53:45</td><td>0:04:08</td><td>4 / 54</td><td>0.79 / 9.86</td><td>5.23</td><td>1.03</td>
+        </tr>
+        
+        <tr>
+            <td>12</td><td>57</td><td>3:04:31</td><td>0:10:46</td><td>5 / 59</td><td>1.55 / 11.41</td><td>6.97</td><td>2.15</td>
+        </tr>
+        
+        <tr>
+            <td>13</td><td>60</td><td>3:12:40</td><td>0:08:09</td><td>6 / 65</td><td>0.70 / 12.11</td><td>11.58</td><td>1.36</td>
+        </tr>
+        
+        <tr>
+            <td>14</td><td>73</td><td>3:22:29</td><td>0:09:49</td><td>7 / 72</td><td>1.27 / 13.38</td><td>7.74</td><td>1.40</td>
+        </tr>
+        
+        <tr>
+            <td>15</td><td>59</td><td>3:33:20</td><td>0:10:51</td><td>5 / 77</td><td>0.82 / 14.20</td><td>13.28</td><td>2.17</td>
+        </tr>
+        
+        <tr>
+            <td>16</td><td>71</td><td>3:41:42</td><td>0:08:22</td><td>7 / 84</td><td>0.61 / 14.81</td><td>13.78</td><td>1.20</td>
+        </tr>
+        
+        <tr>
+            <td>17</td><td>67</td><td>3:52:30</td><td>0:10:48</td><td>6 / 90</td><td>1.72 / 16.52</td><td>6.30</td><td>1.80</td>
+        </tr>
+        
+        <tr>
+            <td>18</td><td>49</td><td>3:59:08</td><td>0:06:38</td><td>4 / 94</td><td>1.00 / 17.52</td><td>6.64</td><td>1.66</td>
+        </tr>
+        
+        <tr>
+            <td>19</td><td>34</td><td>4:07:28</td><td>0:08:20</td><td>3 / 97</td><td>0.95 / 18.47</td><td>8.79</td><td>2.78</td>
+        </tr>
+        
+        <tr>
+            <td>20</td><td>65</td><td>4:15:23</td><td>0:07:55</td><td>6 / 103</td><td>1.07 / 19.54</td><td>7.38</td><td>1.32</td>
+        </tr>
+        
+        <tr>
+            <td>21</td><td>45</td><td>4:21:12</td><td>0:05:49</td><td>4 / 107</td><td>0.63 / 20.17</td><td>9.27</td><td>1.45</td>
+        </tr>
+        
+        <tr>
+            <td>22</td><td>68</td><td>4:34:52</td><td>0:13:40</td><td>6 / 113</td><td>1.46 / 21.63</td><td>9.33</td><td>2.28</td>
+        </tr>
+        
+        <tr>
+            <td>23</td><td>54</td><td>4:43:37</td><td>0:08:45</td><td>5 / 118</td><td>1.71 / 23.34</td><td>5.11</td><td>1.75</td>
+        </tr>
+        
+        <tr>
+            <td>24</td><td>37</td><td>4:50:38</td><td>0:07:01</td><td>3 / 121</td><td>0.72 / 24.06</td><td>9.79</td><td>2.34</td>
+        </tr>
+        
+        <tr>
+            <td>25</td><td>53</td><td>4:59:52</td><td>0:09:14</td><td>5 / 126</td><td>1.02 / 25.08</td><td>9.08</td><td>1.85</td>
+        </tr>
+        
+        <tr>
+            <td>26</td><td>36</td><td>5:08:01</td><td>0:08:09</td><td>3 / 129</td><td>0.86 / 25.94</td><td>9.48</td><td>2.72</td>
+        </tr>
+        
+        <tr>
+            <td>27</td><td>31</td><td>5:13:48</td><td>0:05:47</td><td>3 / 132</td><td>0.87 / 26.80</td><td>6.67</td><td>1.93</td>
+        </tr>
+        
+        <tr>
+            <td>28</td><td>47</td><td>5:19:50</td><td>0:06:02</td><td>4 / 136</td><td>3.60 / 30.40</td><td>1.68</td><td>1.51</td>
+        </tr>
+        
+        <tr>
+            <td>29</td><td>F</td><td>3:50:01</td><td>0:08:19</td><td></td><td>3.26 / 33.66</td><td>2.55</td><td></td>
+        </tr>
+        
+        <tr>
+		    <th></th><th></th><th></th><th></th><th>136</th><th>33.66</th><th>6.83</th><th>1.69</th>
+        </tr>
+    </table>
+    <script>
+       var cp_list = [
+          [815,668],[850,795],[1068,884],[1029,1059],[977,1257],[920,1179],[779,1249],[704,1460],[549,1222],[550,1384],[440,1399],[510,1538],[214,1608],[131,1497],[114,1248],[262,1185],[381,1196],[69,1067],[157,891],[253,731],[421,603],[402,481],[118,432],[337,176],[476,200],[620,339],[599,507],[748,590],[677,1295],[815,668],
+       ]
+       var canvas = document.getElementById("map");
+       var context = canvas.getContext("2d");
+       var map = new Image();
+       map.src = "map.gif";
+       map.onload = function() {
+          canvas.width = this.naturalWidth;
+          canvas.height = this.naturalHeight;
+          context.scale(1, 1);
+          context.drawImage(map, 0, 0);
+          context.strokeStyle = "rgba(255,0,0,0.8)";
+          context.fillStyle = "rgba(255,0,0,0.8)";
+          for (i=0; i<cp_list.length; i++) {
+             context.beginPath();
+             context.arc(cp_list[i][0], cp_list[i][1], 3, 0, Math.PI * 2, false);
+             context.closePath();
+             context.stroke();
+             context.fill();
+          }
+          context.lineWidth = 4;
+          var old_x = cp_list[0][0], old_y = cp_list[0][1];
+          for (i=1; i<cp_list.length; i++) {
+             context.beginPath();
+             context.moveTo(old_x, old_y);
+             context.lineTo(cp_list[i][0], cp_list[i][1]);
+             context.stroke();
+             old_x = cp_list[i][0];
+             old_y = cp_list[i][1];
+          }
+          /*
+          context.beginPath();
+          context.moveTo(s[0] + arrow[0][0], s[1] + arrow[0][1]);
+          for (i=1; i<arrow.length; i++) {
+             context.lineTo(s[0] + arrow[i][0], s[1] + arrow[i][1]);
+          }
+          context.stroke();
+          context.fill();
+          */
+       };
+    </script>
+</body>
+</html>
