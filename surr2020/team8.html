@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+    <title>8  | Рогейн Авиационный 06 декабря 2020 г.</title>
+    <style>
+body {font-family: monospace; font-size:10pt;}
+table {font-size:10pt; text-align:center;}
+table.team {font-size:12pt; text-align:left;}
+table.result {border:1px AA0055; background:#ddd;}
+table td{ margin:O; padding:0 2px; background:#fff;}
+h1 {font-size:16pt; font-weight:bold; text-align:left;}
+h2 {font-size:14pt; font-weight:bold; text-align:left;}
+div {max-width: 800px;}
+div.blue_rectangle {background: blue; height: 10px; width: 0px;}
+div.green_rectangle {background: green; height: 10px; width: 0px;}
+    </style>
+</head>
+<body>
+    <h1>8 </h1>
+    <h2> Лукьянцев Дмитрий</h2>
+    <table class="team">
+        <tr><td>Место</td><td>46</td></tr>
+        <tr><td>Очки</td><td>103</td></tr>
+        <tr><td>Штраф</td><td>7</td></tr>
+        <tr><td>Время</td><td>3:57:48</td></tr>
+        <tr><td>Результат</td><td><b>96</b></td></tr>
+    </table>
+    <canvas id="map"></canvas>
+    <table class="result">
+        <tr>
+		    <th>КП</th><th>Время</th><th>Сплит</th><th>Очки</th><th>Расстояние, км</th><th>Темп, мин/км</th><th>Мин/очко</th>
+        </tr>
+        
+        <tr>
+            <td>S</td><td></td><td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        
+        <tr>
+            <td>33</td><td>0:07:29</td><td>0:07:29</td><td>3 / 3</td><td>0.53 / 0.53</td><td>14.13</td><td>2.49</td>
+        </tr>
+        
+        <tr>
+            <td>67</td><td>0:16:27</td><td>0:08:58</td><td>6 / 9</td><td>0.89 / 1.42</td><td>10.03</td><td>1.49</td>
+        </tr>
+        
+        <tr>
+            <td>51</td><td>0:24:13</td><td>0:07:46</td><td>5 / 14</td><td>0.79 / 2.22</td><td>9.80</td><td>1.55</td>
+        </tr>
+        
+        <tr>
+            <td>71</td><td>0:24:13</td><td></td><td>7 / 21</td><td>1.15 / 3.37</td><td></td><td></td>
+        </tr>
+        
+        <tr>
+            <td>52</td><td>0:45:25</td><td>0:21:12</td><td>5 / 26</td><td>0.75 / 4.12</td><td>28.33</td><td>4.24</td>
+        </tr>
+        
+        <tr>
+            <td>69</td><td>1:05:13</td><td>0:19:48</td><td>6 / 32</td><td>1.34 / 5.46</td><td>14.79</td><td>3.30</td>
+        </tr>
+        
+        <tr>
+            <td>53</td><td>1:23:27</td><td>0:18:14</td><td>5 / 37</td><td>0.55 / 6.01</td><td>33.03</td><td>3.65</td>
+        </tr>
+        
+        <tr>
+            <td>56</td><td>1:37:01</td><td>0:13:34</td><td>5 / 42</td><td>1.09 / 7.10</td><td>12.46</td><td>2.71</td>
+        </tr>
+        
+        <tr>
+            <td>64</td><td>1:55:13</td><td>0:18:12</td><td>6 / 48</td><td>0.81 / 7.90</td><td>22.58</td><td>3.03</td>
+        </tr>
+        
+        <tr>
+            <td>68</td><td>2:10:21</td><td>0:15:08</td><td>6 / 54</td><td>1.00 / 8.91</td><td>15.06</td><td>2.52</td>
+        </tr>
+        
+        <tr>
+            <td>65</td><td>2:20:24</td><td>0:10:03</td><td>6 / 60</td><td>1.32 / 10.23</td><td>7.61</td><td>1.68</td>
+        </tr>
+        
+        <tr>
+            <td>74</td><td>2:25:49</td><td>0:05:25</td><td>7 / 67</td><td>0.70 / 10.93</td><td>7.75</td><td>0.77</td>
+        </tr>
+        
+        <tr>
+            <td>81</td><td>2:37:33</td><td>0:11:44</td><td>8 / 75</td><td>0.87 / 11.79</td><td>13.56</td><td>1.47</td>
+        </tr>
+        
+        <tr>
+            <td>73</td><td>2:46:48</td><td>0:09:15</td><td>7 / 82</td><td>0.85 / 12.64</td><td>10.87</td><td>1.32</td>
+        </tr>
+        
+        <tr>
+            <td>59</td><td>3:06:56</td><td>0:20:08</td><td>5 / 87</td><td>1.82 / 14.46</td><td>11.07</td><td>4.03</td>
+        </tr>
+        
+        <tr>
+            <td>57</td><td>3:17:53</td><td>0:10:57</td><td>5 / 92</td><td>1.22 / 15.68</td><td>9.00</td><td>2.19</td>
+        </tr>
+        
+        <tr>
+            <td>49</td><td>3:28:58</td><td>0:11:05</td><td>4 / 96</td><td>0.83 / 16.51</td><td>13.43</td><td>2.77</td>
+        </tr>
+        
+        <tr>
+            <td>72</td><td>3:48:14</td><td>0:19:16</td><td>7 / 103</td><td>1.90 / 18.40</td><td>10.15</td><td>2.75</td>
+        </tr>
+        
+        <tr>
+            <td>F</td><td>3:57:48</td><td>0:09:34</td><td></td><td>0.79 / 19.20</td><td>12.04</td><td></td>
+        </tr>
+        
+        <tr>
+		    <th></th><th></th><th></th><th>103</th><th>19.20</th><th>12.39</th><th>2.31</th>
+        </tr>
+    </table>
+    <script>
+       var cp_list = [
+          [432.0,1100.0],[408.85951674086317,1009.4156854939355],[364.69671305371264,857.3247693599001],[270.9323163448956,961.4460347663078],[66.7222811431501,971.850914530239],[136.0682254226681,858.7441507537876],[315.7786267850863,703.6887682539898],[285.4949613363415,796.8923068509148],[200.69773337653362,624.2382303559408],[314.19731653268485,537.0439379774834],[151.11360205281676,466.1799691961001],[291.6866530481118,279.4817706673672],[379.8887438581798,192.4795225542723],[288.20017482628094,70.1594248234303],[155.2984277503408,142.63787420090284],[426.688667295683,317.03781078208897],[438.7586596973406,532.3034961186607],[418.0366254147269,676.9810593245364],[524.8133401925219,995.5697175992175],[432.0,1100.0],
+       ]
+       var canvas = document.getElementById("map");
+       var context = canvas.getContext("2d");
+       var map = new Image();
+       map.src = "map.png";
+       map.onload = function() {
+          canvas.width = this.naturalWidth;
+          canvas.height = this.naturalHeight;
+          context.scale(1, 1);
+          context.drawImage(map, 0, 0);
+          context.strokeStyle = "rgba(255,0,0,0.8)";
+          context.fillStyle = "rgba(255,0,0,0.8)";
+          for (i=0; i<cp_list.length; i++) {
+             context.beginPath();
+             context.arc(cp_list[i][0], cp_list[i][1], 3, 0, Math.PI * 2, false);
+             context.closePath();
+             context.stroke();
+             context.fill();
+          }
+          context.lineWidth = 4;
+          var old_x = cp_list[0][0], old_y = cp_list[0][1];
+          for (i=1; i<cp_list.length; i++) {
+             context.beginPath();
+             context.moveTo(old_x, old_y);
+             context.lineTo(cp_list[i][0], cp_list[i][1]);
+             context.stroke();
+             old_x = cp_list[i][0];
+             old_y = cp_list[i][1];
+          }
+          /*
+          context.beginPath();
+          context.moveTo(s[0] + arrow[0][0], s[1] + arrow[0][1]);
+          for (i=1; i<arrow.length; i++) {
+             context.lineTo(s[0] + arrow[i][0], s[1] + arrow[i][1]);
+          }
+          context.stroke();
+          context.fill();
+          */
+       };
+    </script>
+</body>
+</html>

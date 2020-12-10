@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+    <title>58  | Рогейн Авиационный 06 декабря 2020 г.</title>
+    <style>
+body {font-family: monospace; font-size:10pt;}
+table {font-size:10pt; text-align:center;}
+table.team {font-size:12pt; text-align:left;}
+table.result {border:1px AA0055; background:#ddd;}
+table td{ margin:O; padding:0 2px; background:#fff;}
+h1 {font-size:16pt; font-weight:bold; text-align:left;}
+h2 {font-size:14pt; font-weight:bold; text-align:left;}
+div {max-width: 800px;}
+div.blue_rectangle {background: blue; height: 10px; width: 0px;}
+div.green_rectangle {background: green; height: 10px; width: 0px;}
+    </style>
+</head>
+<body>
+    <h1>58 </h1>
+    <h2> Тонис Александр</h2>
+    <table class="team">
+        <tr><td>Место</td><td>2</td></tr>
+        <tr><td>Очки</td><td>162</td></tr>
+        <tr><td>Штраф</td><td>0</td></tr>
+        <tr><td>Время</td><td>3:59:06</td></tr>
+        <tr><td>Результат</td><td><b>162</b></td></tr>
+    </table>
+    <canvas id="map"></canvas>
+    <table class="result">
+        <tr>
+		    <th>КП</th><th>Время</th><th>Сплит</th><th>Очки</th><th>Расстояние, км</th><th>Темп, мин/км</th><th>Мин/очко</th>
+        </tr>
+        
+        <tr>
+            <td>S</td><td></td><td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        
+        <tr>
+            <td>32</td><td>0:07:52</td><td>0:07:52</td><td>3 / 3</td><td>0.97 / 0.97</td><td>8.08</td><td>2.62</td>
+        </tr>
+        
+        <tr>
+            <td>46</td><td>0:12:01</td><td>0:04:09</td><td>4 / 7</td><td>0.74 / 1.71</td><td>5.65</td><td>1.04</td>
+        </tr>
+        
+        <tr>
+            <td>41</td><td>0:21:06</td><td>0:09:05</td><td>4 / 11</td><td>0.97 / 2.67</td><td>9.40</td><td>2.27</td>
+        </tr>
+        
+        <tr>
+            <td>71</td><td>0:24:59</td><td>0:03:53</td><td>7 / 18</td><td>0.57 / 3.25</td><td>6.77</td><td>0.55</td>
+        </tr>
+        
+        <tr>
+            <td>52</td><td>0:30:12</td><td>0:05:13</td><td>5 / 23</td><td>0.75 / 4.00</td><td>6.97</td><td>1.04</td>
+        </tr>
+        
+        <tr>
+            <td>69</td><td>0:40:01</td><td>0:09:49</td><td>6 / 29</td><td>1.34 / 5.33</td><td>7.33</td><td>1.64</td>
+        </tr>
+        
+        <tr>
+            <td>53</td><td>0:43:44</td><td>0:03:43</td><td>5 / 34</td><td>0.55 / 5.89</td><td>6.73</td><td>0.74</td>
+        </tr>
+        
+        <tr>
+            <td>56</td><td>0:52:30</td><td>0:08:46</td><td>5 / 39</td><td>1.09 / 6.98</td><td>8.05</td><td>1.75</td>
+        </tr>
+        
+        <tr>
+            <td>64</td><td>0:59:11</td><td>0:06:41</td><td>6 / 45</td><td>0.81 / 7.78</td><td>8.29</td><td>1.11</td>
+        </tr>
+        
+        <tr>
+            <td>68</td><td>1:09:11</td><td>0:10:00</td><td>6 / 51</td><td>1.00 / 8.79</td><td>9.95</td><td>1.67</td>
+        </tr>
+        
+        <tr>
+            <td>65</td><td>1:19:20</td><td>0:10:09</td><td>6 / 57</td><td>1.32 / 10.11</td><td>7.69</td><td>1.69</td>
+        </tr>
+        
+        <tr>
+            <td>74</td><td>1:23:21</td><td>0:04:01</td><td>7 / 64</td><td>0.70 / 10.81</td><td>5.75</td><td>0.57</td>
+        </tr>
+        
+        <tr>
+            <td>81</td><td>1:30:58</td><td>0:07:37</td><td>8 / 72</td><td>0.87 / 11.67</td><td>8.80</td><td>0.95</td>
+        </tr>
+        
+        <tr>
+            <td>73</td><td>1:37:59</td><td>0:07:01</td><td>7 / 79</td><td>0.85 / 12.52</td><td>8.24</td><td>1.00</td>
+        </tr>
+        
+        <tr>
+            <td>76</td><td>1:47:26</td><td>0:09:27</td><td>7 / 86</td><td>1.01 / 13.53</td><td>9.34</td><td>1.35</td>
+        </tr>
+        
+        <tr>
+            <td>66</td><td>2:01:44</td><td>0:14:18</td><td>6 / 92</td><td>1.19 / 14.72</td><td>12.05</td><td>2.38</td>
+        </tr>
+        
+        <tr>
+            <td>59</td><td>2:08:31</td><td>0:06:47</td><td>5 / 97</td><td>0.90 / 15.62</td><td>7.56</td><td>1.36</td>
+        </tr>
+        
+        <tr>
+            <td>75</td><td>2:18:37</td><td>0:10:06</td><td>7 / 104</td><td>1.14 / 16.76</td><td>8.84</td><td>1.44</td>
+        </tr>
+        
+        <tr>
+            <td>63</td><td>2:32:12</td><td>0:13:35</td><td>6 / 110</td><td>1.37 / 18.13</td><td>9.88</td><td>2.26</td>
+        </tr>
+        
+        <tr>
+            <td>55</td><td>2:38:31</td><td>0:06:19</td><td>5 / 115</td><td>0.84 / 18.97</td><td>7.52</td><td>1.26</td>
+        </tr>
+        
+        <tr>
+            <td>31</td><td>2:43:19</td><td>0:04:48</td><td>3 / 118</td><td>0.55 / 19.53</td><td>8.68</td><td>1.60</td>
+        </tr>
+        
+        <tr>
+            <td>45</td><td>2:47:06</td><td>0:03:47</td><td>4 / 122</td><td>0.39 / 19.91</td><td>9.79</td><td>0.95</td>
+        </tr>
+        
+        <tr>
+            <td>62</td><td>2:57:33</td><td>0:10:27</td><td>6 / 128</td><td>1.09 / 21.00</td><td>9.62</td><td>1.74</td>
+        </tr>
+        
+        <tr>
+            <td>58</td><td>3:06:31</td><td>0:08:58</td><td>5 / 133</td><td>0.84 / 21.84</td><td>10.72</td><td>1.79</td>
+        </tr>
+        
+        <tr>
+            <td>35</td><td>3:10:57</td><td>0:04:26</td><td>3 / 136</td><td>0.59 / 22.42</td><td>7.57</td><td>1.48</td>
+        </tr>
+        
+        <tr>
+            <td>54</td><td>3:16:15</td><td>0:05:18</td><td>5 / 141</td><td>0.65 / 23.07</td><td>8.15</td><td>1.06</td>
+        </tr>
+        
+        <tr>
+            <td>48</td><td>3:21:21</td><td>0:05:06</td><td>4 / 145</td><td>0.78 / 23.86</td><td>6.50</td><td>1.27</td>
+        </tr>
+        
+        <tr>
+            <td>34</td><td>3:32:53</td><td>0:11:32</td><td>3 / 148</td><td>0.83 / 24.69</td><td>13.91</td><td>3.84</td>
+        </tr>
+        
+        <tr>
+            <td>67</td><td>3:39:33</td><td>0:06:40</td><td>6 / 154</td><td>0.55 / 25.24</td><td>12.12</td><td>1.11</td>
+        </tr>
+        
+        <tr>
+            <td>51</td><td>3:47:01</td><td>0:07:28</td><td>5 / 159</td><td>0.79 / 26.03</td><td>9.42</td><td>1.49</td>
+        </tr>
+        
+        <tr>
+            <td>33</td><td>3:55:05</td><td>0:08:04</td><td>3 / 162</td><td>0.82 / 26.85</td><td>9.79</td><td>2.69</td>
+        </tr>
+        
+        <tr>
+            <td>F</td><td>3:59:06</td><td>0:04:01</td><td></td><td>0.53 / 27.38</td><td>7.58</td><td></td>
+        </tr>
+        
+        <tr>
+		    <th></th><th></th><th></th><th>162</th><th>27.38</th><th>8.73</th><th>1.48</th>
+        </tr>
+    </table>
+    <script>
+       var cp_list = [
+          [432.0,1100.0],[285.30946090619966,1189.0274437483758],[190.08072667399364,1100.2553300158986],[22.814807471898153,1061.67927172221],[66.7222811431501,971.850914530239],[136.0682254226681,858.7441507537876],[315.7786267850863,703.6887682539898],[285.4949613363415,796.8923068509148],[200.69773337653362,624.2382303559408],[314.19731653268485,537.0439379774834],[151.11360205281676,466.1799691961001],[291.6866530481118,279.4817706673672],[379.8887438581798,192.4795225542723],[288.20017482628094,70.1594248234303],[155.2984277503408,142.63787420090284],[132.2963017780901,320.221381883223],[313.6901453992692,428.57853899033444],[426.688667295683,317.03781078208897],[587.0239652083217,192.4882534032472],[602.7812109461474,435.23855557969705],[631.0850708506553,581.1251262930633],[729.7068821473075,575.3166551889328],[797.1118671384119,581.4459290732522],[788.1385885157245,774.102307817273],[644.5351644288345,811.559704824017],[664.000180137617,709.5836627187416],[549.9244641853784,720.8854780589493],[534.5277354066498,858.8816401175886],[414.0377341088872,941.7016835084563],[364.69671305371264,857.3247693599001],[270.9323163448956,961.4460347663078],[408.85951674086317,1009.4156854939355],[432.0,1100.0],
+       ]
+       var canvas = document.getElementById("map");
+       var context = canvas.getContext("2d");
+       var map = new Image();
+       map.src = "map.png";
+       map.onload = function() {
+          canvas.width = this.naturalWidth;
+          canvas.height = this.naturalHeight;
+          context.scale(1, 1);
+          context.drawImage(map, 0, 0);
+          context.strokeStyle = "rgba(255,0,0,0.8)";
+          context.fillStyle = "rgba(255,0,0,0.8)";
+          for (i=0; i<cp_list.length; i++) {
+             context.beginPath();
+             context.arc(cp_list[i][0], cp_list[i][1], 3, 0, Math.PI * 2, false);
+             context.closePath();
+             context.stroke();
+             context.fill();
+          }
+          context.lineWidth = 4;
+          var old_x = cp_list[0][0], old_y = cp_list[0][1];
+          for (i=1; i<cp_list.length; i++) {
+             context.beginPath();
+             context.moveTo(old_x, old_y);
+             context.lineTo(cp_list[i][0], cp_list[i][1]);
+             context.stroke();
+             old_x = cp_list[i][0];
+             old_y = cp_list[i][1];
+          }
+          /*
+          context.beginPath();
+          context.moveTo(s[0] + arrow[0][0], s[1] + arrow[0][1]);
+          for (i=1; i<arrow.length; i++) {
+             context.lineTo(s[0] + arrow[i][0], s[1] + arrow[i][1]);
+          }
+          context.stroke();
+          context.fill();
+          */
+       };
+    </script>
+</body>
+</html>

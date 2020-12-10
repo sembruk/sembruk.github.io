@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+    <title>53  | Рогейн Авиационный 06 декабря 2020 г.</title>
+    <style>
+body {font-family: monospace; font-size:10pt;}
+table {font-size:10pt; text-align:center;}
+table.team {font-size:12pt; text-align:left;}
+table.result {border:1px AA0055; background:#ddd;}
+table td{ margin:O; padding:0 2px; background:#fff;}
+h1 {font-size:16pt; font-weight:bold; text-align:left;}
+h2 {font-size:14pt; font-weight:bold; text-align:left;}
+div {max-width: 800px;}
+div.blue_rectangle {background: blue; height: 10px; width: 0px;}
+div.green_rectangle {background: green; height: 10px; width: 0px;}
+    </style>
+</head>
+<body>
+    <h1>53 </h1>
+    <h2> Цветков Антон </h2>
+    <table class="team">
+        <tr><td>Место</td><td>27</td></tr>
+        <tr><td>Очки</td><td>122</td></tr>
+        <tr><td>Штраф</td><td>6</td></tr>
+        <tr><td>Время</td><td>4:05:15</td></tr>
+        <tr><td>Результат</td><td><b>116</b></td></tr>
+    </table>
+    <canvas id="map"></canvas>
+    <table class="result">
+        <tr>
+		    <th>КП</th><th>Время</th><th>Сплит</th><th>Очки</th><th>Расстояние, км</th><th>Темп, мин/км</th><th>Мин/очко</th>
+        </tr>
+        
+        <tr>
+            <td>S</td><td></td><td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        
+        <tr>
+            <td>33</td><td>0:06:00</td><td>0:06:00</td><td>3 / 3</td><td>0.53 / 0.53</td><td>11.33</td><td>2.00</td>
+        </tr>
+        
+        <tr>
+            <td>34</td><td>0:08:42</td><td>0:02:42</td><td>3 / 6</td><td>0.38 / 0.91</td><td>7.03</td><td>0.90</td>
+        </tr>
+        
+        <tr>
+            <td>48</td><td>0:15:05</td><td>0:06:23</td><td>4 / 10</td><td>0.83 / 1.74</td><td>7.70</td><td>1.60</td>
+        </tr>
+        
+        <tr>
+            <td>44</td><td>0:28:07</td><td>0:13:02</td><td>4 / 14</td><td>1.01 / 2.76</td><td>12.84</td><td>3.26</td>
+        </tr>
+        
+        <tr>
+            <td>62</td><td>0:38:59</td><td>0:10:52</td><td>6 / 20</td><td>1.22 / 3.97</td><td>8.94</td><td>1.81</td>
+        </tr>
+        
+        <tr>
+            <td>58</td><td>0:46:58</td><td>0:07:59</td><td>5 / 25</td><td>0.84 / 4.81</td><td>9.55</td><td>1.60</td>
+        </tr>
+        
+        <tr>
+            <td>35</td><td>0:51:18</td><td>0:04:20</td><td>3 / 28</td><td>0.59 / 5.39</td><td>7.40</td><td>1.44</td>
+        </tr>
+        
+        <tr>
+            <td>54</td><td>0:56:13</td><td>0:04:55</td><td>5 / 33</td><td>0.65 / 6.04</td><td>7.56</td><td>0.98</td>
+        </tr>
+        
+        <tr>
+            <td>55</td><td>1:03:59</td><td>0:07:46</td><td>5 / 38</td><td>0.91 / 6.96</td><td>8.49</td><td>1.55</td>
+        </tr>
+        
+        <tr>
+            <td>31</td><td>1:10:03</td><td>0:06:04</td><td>3 / 41</td><td>0.55 / 7.51</td><td>10.97</td><td>2.02</td>
+        </tr>
+        
+        <tr>
+            <td>45</td><td>1:12:46</td><td>0:02:43</td><td>4 / 45</td><td>0.39 / 7.90</td><td>7.03</td><td>0.68</td>
+        </tr>
+        
+        <tr>
+            <td>63</td><td>1:35:42</td><td>0:22:56</td><td>6 / 51</td><td>1.38 / 9.28</td><td>16.61</td><td>3.82</td>
+        </tr>
+        
+        <tr>
+            <td>57</td><td>1:47:06</td><td>0:11:24</td><td>5 / 56</td><td>1.07 / 10.35</td><td>10.63</td><td>2.28</td>
+        </tr>
+        
+        <tr>
+            <td>64</td><td>1:58:42</td><td>0:11:36</td><td>6 / 62</td><td>0.70 / 11.05</td><td>16.51</td><td>1.93</td>
+        </tr>
+        
+        <tr>
+            <td>66</td><td>2:08:50</td><td>0:10:08</td><td>6 / 68</td><td>0.62 / 11.67</td><td>16.44</td><td>1.69</td>
+        </tr>
+        
+        <tr>
+            <td>59</td><td>2:16:23</td><td>0:07:33</td><td>5 / 73</td><td>0.90 / 12.57</td><td>8.41</td><td>1.51</td>
+        </tr>
+        
+        <tr>
+            <td>74</td><td>2:23:19</td><td>0:06:56</td><td>7 / 80</td><td>0.75 / 13.32</td><td>9.22</td><td>0.99</td>
+        </tr>
+        
+        <tr>
+            <td>81</td><td>2:37:52</td><td>0:14:33</td><td>8 / 88</td><td>0.87 / 14.19</td><td>16.81</td><td>1.82</td>
+        </tr>
+        
+        <tr>
+            <td>73</td><td>2:50:16</td><td>0:12:24</td><td>7 / 95</td><td>0.85 / 15.04</td><td>14.57</td><td>1.77</td>
+        </tr>
+        
+        <tr>
+            <td>65</td><td>3:01:29</td><td>0:11:13</td><td>6 / 101</td><td>1.09 / 16.12</td><td>10.32</td><td>1.87</td>
+        </tr>
+        
+        <tr>
+            <td>68</td><td>3:13:45</td><td>0:12:16</td><td>6 / 107</td><td>1.32 / 17.44</td><td>9.29</td><td>2.04</td>
+        </tr>
+        
+        <tr>
+            <td>56</td><td>3:28:47</td><td>0:15:02</td><td>5 / 112</td><td>0.93 / 18.37</td><td>16.15</td><td>3.01</td>
+        </tr>
+        
+        <tr>
+            <td>53</td><td>3:43:31</td><td>0:14:44</td><td>5 / 117</td><td>1.09 / 19.46</td><td>13.53</td><td>2.95</td>
+        </tr>
+        
+        <tr>
+            <td>51</td><td>3:52:02</td><td>0:08:31</td><td>5 / 122</td><td>0.93 / 20.40</td><td>9.12</td><td>1.70</td>
+        </tr>
+        
+        <tr>
+            <td>F</td><td>4:05:15</td><td>0:13:13</td><td></td><td>1.20 / 21.60</td><td>11.01</td><td></td>
+        </tr>
+        
+        <tr>
+		    <th></th><th></th><th></th><th>122</th><th>21.60</th><th>11.36</th><th>2.01</th>
+        </tr>
+    </table>
+    <script>
+       var cp_list = [
+          [432.0,1100.0],[408.85951674086317,1009.4156854939355],[414.0377341088872,941.7016835084563],[534.5277354066498,858.8816401175886],[682.040572501919,961.4875019974276],[788.1385885157245,774.102307817273],[644.5351644288345,811.559704824017],[664.000180137617,709.5836627187416],[549.9244641853784,720.8854780589493],[631.0850708506553,581.1251262930633],[729.7068821473075,575.3166551889328],[797.1118671384119,581.4459290732522],[602.7812109461474,435.23855557969705],[438.7586596973406,532.3034961186607],[314.19731653268485,537.0439379774834],[313.6901453992692,428.57853899033444],[426.688667295683,317.03781078208897],[379.8887438581798,192.4795225542723],[288.20017482628094,70.1594248234303],[155.2984277503408,142.63787420090284],[291.6866530481118,279.4817706673672],[151.11360205281676,466.1799691961001],[200.69773337653362,624.2382303559408],[285.4949613363415,796.8923068509148],[270.9323163448956,961.4460347663078],[432.0,1100.0],
+       ]
+       var canvas = document.getElementById("map");
+       var context = canvas.getContext("2d");
+       var map = new Image();
+       map.src = "map.png";
+       map.onload = function() {
+          canvas.width = this.naturalWidth;
+          canvas.height = this.naturalHeight;
+          context.scale(1, 1);
+          context.drawImage(map, 0, 0);
+          context.strokeStyle = "rgba(255,0,0,0.8)";
+          context.fillStyle = "rgba(255,0,0,0.8)";
+          for (i=0; i<cp_list.length; i++) {
+             context.beginPath();
+             context.arc(cp_list[i][0], cp_list[i][1], 3, 0, Math.PI * 2, false);
+             context.closePath();
+             context.stroke();
+             context.fill();
+          }
+          context.lineWidth = 4;
+          var old_x = cp_list[0][0], old_y = cp_list[0][1];
+          for (i=1; i<cp_list.length; i++) {
+             context.beginPath();
+             context.moveTo(old_x, old_y);
+             context.lineTo(cp_list[i][0], cp_list[i][1]);
+             context.stroke();
+             old_x = cp_list[i][0];
+             old_y = cp_list[i][1];
+          }
+          /*
+          context.beginPath();
+          context.moveTo(s[0] + arrow[0][0], s[1] + arrow[0][1]);
+          for (i=1; i<arrow.length; i++) {
+             context.lineTo(s[0] + arrow[i][0], s[1] + arrow[i][1]);
+          }
+          context.stroke();
+          context.fill();
+          */
+       };
+    </script>
+</body>
+</html>
